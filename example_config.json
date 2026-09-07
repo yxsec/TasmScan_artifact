@@ -1,0 +1,20 @@
+{
+  "detectors": [
+    {
+      "name": "bounced_message",
+      "severity": "critical"
+    },
+    {
+      "name": "no_accept_before_send",
+      "severity": "high"
+    },
+    {
+      "name": "unchecked_sender",
+      "severity": "medium"
+    },
+    {
+      "name": "stack_underflow",
+      "severity": "high"
+    }
+  ]
+}

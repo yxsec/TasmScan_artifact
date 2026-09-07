@@ -1,0 +1,9890 @@
+{
+  "generatedAt": "2026-02-01T21:30:45.768845Z",
+  "source": "tasm/dist/generator/instructions.js",
+  "instructions": [
+    {
+      "name": "NOP",
+      "min": 0,
+      "max": 65536,
+      "opcodeBits": 8,
+      "prefix": 0,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SWAP",
+      "min": 65536,
+      "max": 131072,
+      "opcodeBits": 8,
+      "prefix": 1,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "XCHG_0I",
+      "min": 131072,
+      "max": 1048576,
+      "opcodeBits": 4,
+      "prefix": 2,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "XCHG_IJ",
+      "min": 1048576,
+      "max": 1114112,
+      "opcodeBits": 8,
+      "prefix": 16,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "XCHG_0I_LONG",
+      "min": 1114112,
+      "max": 1179648,
+      "opcodeBits": 8,
+      "prefix": 17,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "XCHG_1I",
+      "min": 1179648,
+      "max": 2097152,
+      "opcodeBits": 4,
+      "prefix": 18,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "s1"
+        },
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "DUP",
+      "min": 2097152,
+      "max": 2162688,
+      "opcodeBits": 8,
+      "prefix": 32,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "OVER",
+      "min": 2162688,
+      "max": 2228224,
+      "opcodeBits": 8,
+      "prefix": 33,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PUSH",
+      "min": 2228224,
+      "max": 3145728,
+      "opcodeBits": 4,
+      "prefix": 34,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "DROP",
+      "min": 3145728,
+      "max": 3211264,
+      "opcodeBits": 8,
+      "prefix": 48,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NIP",
+      "min": 3211264,
+      "max": 3276800,
+      "opcodeBits": 8,
+      "prefix": 49,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "POP",
+      "min": 3276800,
+      "max": 4194304,
+      "opcodeBits": 4,
+      "prefix": 50,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "XCHG3",
+      "min": 4194304,
+      "max": 5242880,
+      "opcodeBits": 4,
+      "prefix": 4,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "XCHG2",
+      "min": 5242880,
+      "max": 5308416,
+      "opcodeBits": 8,
+      "prefix": 80,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "XCPU",
+      "min": 5308416,
+      "max": 5373952,
+      "opcodeBits": 8,
+      "prefix": 81,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "PUXC",
+      "min": 5373952,
+      "max": 5439488,
+      "opcodeBits": 8,
+      "prefix": 82,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "delta",
+          "delta": -1,
+          "arg": {
+            "type": "stack",
+            "len": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUSH2",
+      "min": 5439488,
+      "max": 5505024,
+      "opcodeBits": 8,
+      "prefix": 83,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "XCHG3_ALT",
+      "min": 5505024,
+      "max": 5509120,
+      "opcodeBits": 12,
+      "prefix": 1344,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "XC2PU",
+      "min": 5509120,
+      "max": 5513216,
+      "opcodeBits": 12,
+      "prefix": 1345,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "XCPUXC",
+      "min": 5513216,
+      "max": 5517312,
+      "opcodeBits": 12,
+      "prefix": 1346,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "delta",
+          "delta": -1,
+          "arg": {
+            "type": "stack",
+            "len": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "XCPU2",
+      "min": 5517312,
+      "max": 5521408,
+      "opcodeBits": 12,
+      "prefix": 1347,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "PUXC2",
+      "min": 5521408,
+      "max": 5525504,
+      "opcodeBits": 12,
+      "prefix": 1348,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "delta",
+          "delta": -1,
+          "arg": {
+            "type": "stack",
+            "len": 4
+          }
+        },
+        {
+          "type": "delta",
+          "delta": -1,
+          "arg": {
+            "type": "stack",
+            "len": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUXCPU",
+      "min": 5525504,
+      "max": 5529600,
+      "opcodeBits": 12,
+      "prefix": 1349,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "delta",
+          "delta": -1,
+          "arg": {
+            "type": "stack",
+            "len": 4
+          }
+        },
+        {
+          "type": "delta",
+          "delta": -1,
+          "arg": {
+            "type": "stack",
+            "len": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "PU2XC",
+      "min": 5529600,
+      "max": 5533696,
+      "opcodeBits": 12,
+      "prefix": 1350,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "delta",
+          "delta": -1,
+          "arg": {
+            "type": "stack",
+            "len": 4
+          }
+        },
+        {
+          "type": "delta",
+          "delta": -2,
+          "arg": {
+            "type": "stack",
+            "len": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUSH3",
+      "min": 5533696,
+      "max": 5537792,
+      "opcodeBits": 12,
+      "prefix": 1351,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "BLKSWAP",
+      "min": 5570560,
+      "max": 5636096,
+      "opcodeBits": 8,
+      "prefix": 85,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 4
+          }
+        },
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUSH_LONG",
+      "min": 5636096,
+      "max": 5701632,
+      "opcodeBits": 8,
+      "prefix": 86,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "POP_LONG",
+      "min": 5701632,
+      "max": 5767168,
+      "opcodeBits": 8,
+      "prefix": 87,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "ROT",
+      "min": 5767168,
+      "max": 5832704,
+      "opcodeBits": 8,
+      "prefix": 88,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ROTREV",
+      "min": 5832704,
+      "max": 5898240,
+      "opcodeBits": 8,
+      "prefix": 89,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SWAP2",
+      "min": 5898240,
+      "max": 5963776,
+      "opcodeBits": 8,
+      "prefix": 90,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DROP2",
+      "min": 5963776,
+      "max": 6029312,
+      "opcodeBits": 8,
+      "prefix": 91,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DUP2",
+      "min": 6029312,
+      "max": 6094848,
+      "opcodeBits": 8,
+      "prefix": 92,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "OVER2",
+      "min": 6094848,
+      "max": 6160384,
+      "opcodeBits": 8,
+      "prefix": 93,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "REVERSE",
+      "min": 6160384,
+      "max": 6225920,
+      "opcodeBits": 8,
+      "prefix": 94,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 2,
+          "arg": {
+            "type": "uint",
+            "len": 4
+          }
+        },
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "BLKDROP",
+      "min": 6225920,
+      "max": 6230016,
+      "opcodeBits": 12,
+      "prefix": 1520,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "BLKPUSH",
+      "min": 6230016,
+      "max": 6291456,
+      "opcodeBits": 8,
+      "prefix": 24336,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        },
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "PICK",
+      "min": 6291456,
+      "max": 6356992,
+      "opcodeBits": 8,
+      "prefix": 96,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ROLL",
+      "min": 6356992,
+      "max": 6422528,
+      "opcodeBits": 8,
+      "prefix": 97,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ROLLREV",
+      "min": 6422528,
+      "max": 6488064,
+      "opcodeBits": 8,
+      "prefix": 98,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLKSWX",
+      "min": 6488064,
+      "max": 6553600,
+      "opcodeBits": 8,
+      "prefix": 99,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "REVX",
+      "min": 6553600,
+      "max": 6619136,
+      "opcodeBits": 8,
+      "prefix": 100,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DROPX",
+      "min": 6619136,
+      "max": 6684672,
+      "opcodeBits": 8,
+      "prefix": 101,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "TUCK",
+      "min": 6684672,
+      "max": 6750208,
+      "opcodeBits": 8,
+      "prefix": 102,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "XCHGX",
+      "min": 6750208,
+      "max": 6815744,
+      "opcodeBits": 8,
+      "prefix": 103,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DEPTH",
+      "min": 6815744,
+      "max": 6881280,
+      "opcodeBits": 8,
+      "prefix": 104,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CHKDEPTH",
+      "min": 6881280,
+      "max": 6946816,
+      "opcodeBits": 8,
+      "prefix": 105,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ONLYTOPX",
+      "min": 6946816,
+      "max": 7012352,
+      "opcodeBits": 8,
+      "prefix": 106,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ONLYX",
+      "min": 7012352,
+      "max": 7077888,
+      "opcodeBits": 8,
+      "prefix": 107,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLKDROP2",
+      "min": 7081984,
+      "max": 7143424,
+      "opcodeBits": 8,
+      "prefix": 27664,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        },
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "PUSHNULL",
+      "min": 7143424,
+      "max": 7208960,
+      "opcodeBits": 8,
+      "prefix": 109,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ISNULL",
+      "min": 7208960,
+      "max": 7274496,
+      "opcodeBits": 8,
+      "prefix": 110,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "TUPLE",
+      "min": 7274496,
+      "max": 7278592,
+      "opcodeBits": 12,
+      "prefix": 1776,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "INDEX",
+      "min": 7278592,
+      "max": 7282688,
+      "opcodeBits": 12,
+      "prefix": 1777,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "UNTUPLE",
+      "min": 7282688,
+      "max": 7286784,
+      "opcodeBits": 12,
+      "prefix": 1778,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "UNPACKFIRST",
+      "min": 7286784,
+      "max": 7290880,
+      "opcodeBits": 12,
+      "prefix": 1779,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "EXPLODE",
+      "min": 7290880,
+      "max": 7294976,
+      "opcodeBits": 12,
+      "prefix": 1780,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "SETINDEX",
+      "min": 7294976,
+      "max": 7299072,
+      "opcodeBits": 12,
+      "prefix": 1781,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "INDEXQ",
+      "min": 7299072,
+      "max": 7303168,
+      "opcodeBits": 12,
+      "prefix": 1782,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "SETINDEXQ",
+      "min": 7303168,
+      "max": 7307264,
+      "opcodeBits": 12,
+      "prefix": 1783,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "TUPLEVAR",
+      "min": 7307264,
+      "max": 7307520,
+      "opcodeBits": 16,
+      "prefix": 28544,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INDEXVAR",
+      "min": 7307520,
+      "max": 7307776,
+      "opcodeBits": 16,
+      "prefix": 28545,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "UNTUPLEVAR",
+      "min": 7307776,
+      "max": 7308032,
+      "opcodeBits": 16,
+      "prefix": 28546,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "UNPACKFIRSTVAR",
+      "min": 7308032,
+      "max": 7308288,
+      "opcodeBits": 16,
+      "prefix": 28547,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "EXPLODEVAR",
+      "min": 7308288,
+      "max": 7308544,
+      "opcodeBits": 16,
+      "prefix": 28548,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETINDEXVAR",
+      "min": 7308544,
+      "max": 7308800,
+      "opcodeBits": 16,
+      "prefix": 28549,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INDEXVARQ",
+      "min": 7308800,
+      "max": 7309056,
+      "opcodeBits": 16,
+      "prefix": 28550,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETINDEXVARQ",
+      "min": 7309056,
+      "max": 7309312,
+      "opcodeBits": 16,
+      "prefix": 28551,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "TLEN",
+      "min": 7309312,
+      "max": 7309568,
+      "opcodeBits": 16,
+      "prefix": 28552,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QTLEN",
+      "min": 7309568,
+      "max": 7309824,
+      "opcodeBits": 16,
+      "prefix": 28553,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ISTUPLE",
+      "min": 7309824,
+      "max": 7310080,
+      "opcodeBits": 16,
+      "prefix": 28554,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LAST",
+      "min": 7310080,
+      "max": 7310336,
+      "opcodeBits": 16,
+      "prefix": 28555,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "TPUSH",
+      "min": 7310336,
+      "max": 7310592,
+      "opcodeBits": 16,
+      "prefix": 28556,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "TPOP",
+      "min": 7310592,
+      "max": 7310848,
+      "opcodeBits": 16,
+      "prefix": 28557,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NULLSWAPIF",
+      "min": 7315456,
+      "max": 7315712,
+      "opcodeBits": 16,
+      "prefix": 28576,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NULLSWAPIFNOT",
+      "min": 7315712,
+      "max": 7315968,
+      "opcodeBits": 16,
+      "prefix": 28577,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NULLROTRIF",
+      "min": 7315968,
+      "max": 7316224,
+      "opcodeBits": 16,
+      "prefix": 28578,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NULLROTRIFNOT",
+      "min": 7316224,
+      "max": 7316480,
+      "opcodeBits": 16,
+      "prefix": 28579,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NULLSWAPIF2",
+      "min": 7316480,
+      "max": 7316736,
+      "opcodeBits": 16,
+      "prefix": 28580,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NULLSWAPIFNOT2",
+      "min": 7316736,
+      "max": 7316992,
+      "opcodeBits": 16,
+      "prefix": 28581,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NULLROTRIF2",
+      "min": 7316992,
+      "max": 7317248,
+      "opcodeBits": 16,
+      "prefix": 28582,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NULLROTRIFNOT2",
+      "min": 7317248,
+      "max": 7317504,
+      "opcodeBits": 16,
+      "prefix": 28583,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INDEX2",
+      "min": 7319552,
+      "max": 7323648,
+      "opcodeBits": 12,
+      "prefix": 1787,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 2
+        },
+        {
+          "type": "uint",
+          "len": 2
+        }
+      ]
+    },
+    {
+      "name": "INDEX3",
+      "min": 7323648,
+      "max": 7340032,
+      "opcodeBits": 10,
+      "prefix": 447,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 2
+        },
+        {
+          "type": "uint",
+          "len": 2
+        },
+        {
+          "type": "uint",
+          "len": 2
+        }
+      ]
+    },
+    {
+      "name": "PUSHINT_4",
+      "min": 7340032,
+      "max": 8388608,
+      "opcodeBits": 4,
+      "prefix": 7,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "tinyInt"
+        }
+      ]
+    },
+    {
+      "name": "PUSHINT_8",
+      "min": 8388608,
+      "max": 8454144,
+      "opcodeBits": 8,
+      "prefix": 128,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "PUSHINT_16",
+      "min": 8454144,
+      "max": 8519680,
+      "opcodeBits": 8,
+      "prefix": 129,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 16
+        }
+      ]
+    },
+    {
+      "name": "PUSHINT_LONG",
+      "min": 8519680,
+      "max": 8583168,
+      "opcodeBits": 8,
+      "prefix": 4160,
+      "kind": "ext-range",
+      "args": [
+        {
+          "type": "largeInt"
+        }
+      ]
+    },
+    {
+      "name": "PUSHPOW2",
+      "min": 8585216,
+      "max": 8650496,
+      "opcodeBits": 8,
+      "prefix": 33536,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUSHNAN",
+      "min": 8650496,
+      "max": 8650752,
+      "opcodeBits": 16,
+      "prefix": 33791,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PUSHPOW2DEC",
+      "min": 8650752,
+      "max": 8716288,
+      "opcodeBits": 8,
+      "prefix": 132,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUSHNEGPOW2",
+      "min": 8716288,
+      "max": 8781824,
+      "opcodeBits": 8,
+      "prefix": 133,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUSHREF",
+      "min": 8912896,
+      "max": 8978432,
+      "opcodeBits": 8,
+      "prefix": 136,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "PUSHREFSLICE",
+      "min": 8978432,
+      "max": 9043968,
+      "opcodeBits": 8,
+      "prefix": 137,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "PUSHREFCONT",
+      "min": 9043968,
+      "max": 9109504,
+      "opcodeBits": 8,
+      "prefix": 138,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "PUSHSLICE",
+      "min": 9109504,
+      "max": 9175040,
+      "opcodeBits": 8,
+      "prefix": 139,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "slice",
+          "pad": 4,
+          "refs": {
+            "type": "uint",
+            "len": 0
+          },
+          "bits": {
+            "type": "uint",
+            "len": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUSHSLICE_REFS",
+      "min": 9175040,
+      "max": 9240576,
+      "opcodeBits": 8,
+      "prefix": 140,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "slice",
+          "pad": 1,
+          "refs": {
+            "type": "delta",
+            "delta": 1,
+            "arg": {
+              "type": "uint",
+              "len": 2
+            }
+          },
+          "bits": {
+            "type": "uint",
+            "len": 5
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUSHSLICE_LONG",
+      "min": 9240576,
+      "max": 9281536,
+      "opcodeBits": 8,
+      "prefix": 144384,
+      "kind": "ext-range",
+      "args": [
+        {
+          "type": "slice",
+          "pad": 6,
+          "refs": {
+            "type": "uint",
+            "len": 3
+          },
+          "bits": {
+            "type": "uint",
+            "len": 7
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUSHCONT",
+      "min": 9306112,
+      "max": 9437184,
+      "opcodeBits": 7,
+      "prefix": 71,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "codeSlice",
+          "refs": {
+            "type": "uint",
+            "len": 2
+          },
+          "bits": {
+            "type": "uint",
+            "len": 7
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUSHCONT_SHORT",
+      "min": 9437184,
+      "max": 10485760,
+      "opcodeBits": 4,
+      "prefix": 9,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "inlineCodeSlice",
+          "bits": {
+            "type": "uint",
+            "len": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "ADD",
+      "min": 10485760,
+      "max": 10551296,
+      "opcodeBits": 8,
+      "prefix": 160,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SUB",
+      "min": 10551296,
+      "max": 10616832,
+      "opcodeBits": 8,
+      "prefix": 161,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SUBR",
+      "min": 10616832,
+      "max": 10682368,
+      "opcodeBits": 8,
+      "prefix": 162,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NEGATE",
+      "min": 10682368,
+      "max": 10747904,
+      "opcodeBits": 8,
+      "prefix": 163,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INC",
+      "min": 10747904,
+      "max": 10813440,
+      "opcodeBits": 8,
+      "prefix": 164,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DEC",
+      "min": 10813440,
+      "max": 10878976,
+      "opcodeBits": 8,
+      "prefix": 165,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ADDINT",
+      "min": 10878976,
+      "max": 10944512,
+      "opcodeBits": 8,
+      "prefix": 166,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "MULINT",
+      "min": 10944512,
+      "max": 11010048,
+      "opcodeBits": 8,
+      "prefix": 167,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "MUL",
+      "min": 11010048,
+      "max": 11075584,
+      "opcodeBits": 8,
+      "prefix": 168,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ADDDIVMOD",
+      "min": 11075584,
+      "max": 11075840,
+      "opcodeBits": 16,
+      "prefix": 43264,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ADDDIVMODR",
+      "min": 11075840,
+      "max": 11076096,
+      "opcodeBits": 16,
+      "prefix": 43265,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ADDDIVMODC",
+      "min": 11076096,
+      "max": 11076352,
+      "opcodeBits": 16,
+      "prefix": 43266,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DIV",
+      "min": 11076608,
+      "max": 11076864,
+      "opcodeBits": 16,
+      "prefix": 43268,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DIVR",
+      "min": 11076864,
+      "max": 11077120,
+      "opcodeBits": 16,
+      "prefix": 43269,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DIVC",
+      "min": 11077120,
+      "max": 11077376,
+      "opcodeBits": 16,
+      "prefix": 43270,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MOD",
+      "min": 11077632,
+      "max": 11077888,
+      "opcodeBits": 16,
+      "prefix": 43272,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MODR",
+      "min": 11077888,
+      "max": 11078144,
+      "opcodeBits": 16,
+      "prefix": 43273,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MODC",
+      "min": 11078144,
+      "max": 11078400,
+      "opcodeBits": 16,
+      "prefix": 43274,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DIVMOD",
+      "min": 11078656,
+      "max": 11078912,
+      "opcodeBits": 16,
+      "prefix": 43276,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DIVMODR",
+      "min": 11078912,
+      "max": 11079168,
+      "opcodeBits": 16,
+      "prefix": 43277,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DIVMODC",
+      "min": 11079168,
+      "max": 11079424,
+      "opcodeBits": 16,
+      "prefix": 43278,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ADDRSHIFTMOD",
+      "min": 11083776,
+      "max": 11084032,
+      "opcodeBits": 16,
+      "prefix": 43296,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ADDRSHIFTMODR",
+      "min": 11084032,
+      "max": 11084288,
+      "opcodeBits": 16,
+      "prefix": 43297,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ADDRSHIFTMODC",
+      "min": 11084288,
+      "max": 11084544,
+      "opcodeBits": 16,
+      "prefix": 43298,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RSHIFT_ALT",
+      "min": 11084800,
+      "max": 11085056,
+      "opcodeBits": 16,
+      "prefix": 43300,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RSHIFTR",
+      "min": 11085056,
+      "max": 11085312,
+      "opcodeBits": 16,
+      "prefix": 43301,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RSHIFTC",
+      "min": 11085312,
+      "max": 11085568,
+      "opcodeBits": 16,
+      "prefix": 43302,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MODPOW2",
+      "min": 11085824,
+      "max": 11086080,
+      "opcodeBits": 16,
+      "prefix": 43304,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MODPOW2R",
+      "min": 11086080,
+      "max": 11086336,
+      "opcodeBits": 16,
+      "prefix": 43305,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MODPOW2C",
+      "min": 11086336,
+      "max": 11086592,
+      "opcodeBits": 16,
+      "prefix": 43306,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RSHIFTMOD",
+      "min": 11086848,
+      "max": 11087104,
+      "opcodeBits": 16,
+      "prefix": 43308,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RSHIFTMODR",
+      "min": 11087104,
+      "max": 11087360,
+      "opcodeBits": 16,
+      "prefix": 43309,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RSHIFTMODC",
+      "min": 11087360,
+      "max": 11087616,
+      "opcodeBits": 16,
+      "prefix": 43310,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ADDRSHIFT_MOD",
+      "min": 11087872,
+      "max": 11088128,
+      "opcodeBits": 16,
+      "prefix": 43312,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "ADDRSHIFTR_MOD",
+      "min": 11088128,
+      "max": 11088384,
+      "opcodeBits": 16,
+      "prefix": 43313,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "ADDRSHIFTC_MOD",
+      "min": 11088384,
+      "max": 11088640,
+      "opcodeBits": 16,
+      "prefix": 43314,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "RSHIFT_",
+      "min": 11088896,
+      "max": 11089152,
+      "opcodeBits": 16,
+      "prefix": 43316,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "RSHIFTR_",
+      "min": 11089152,
+      "max": 11089408,
+      "opcodeBits": 16,
+      "prefix": 43317,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "RSHIFTC_",
+      "min": 11089408,
+      "max": 11089664,
+      "opcodeBits": 16,
+      "prefix": 43318,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MODPOW2_",
+      "min": 11089920,
+      "max": 11090176,
+      "opcodeBits": 16,
+      "prefix": 43320,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MODPOW2R_",
+      "min": 11090176,
+      "max": 11090432,
+      "opcodeBits": 16,
+      "prefix": 43321,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MODPOW2C_",
+      "min": 11090432,
+      "max": 11090688,
+      "opcodeBits": 16,
+      "prefix": 43322,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "RSHIFT_MOD",
+      "min": 11090944,
+      "max": 11091200,
+      "opcodeBits": 16,
+      "prefix": 43324,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "RSHIFTR_MOD",
+      "min": 11091200,
+      "max": 11091456,
+      "opcodeBits": 16,
+      "prefix": 43325,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "RSHIFTC_MOD",
+      "min": 11091456,
+      "max": 11091712,
+      "opcodeBits": 16,
+      "prefix": 43326,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MULADDDIVMOD",
+      "min": 11108352,
+      "max": 11108608,
+      "opcodeBits": 16,
+      "prefix": 43392,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULADDDIVMODR",
+      "min": 11108608,
+      "max": 11108864,
+      "opcodeBits": 16,
+      "prefix": 43393,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULADDDIVMODC",
+      "min": 11108864,
+      "max": 11109120,
+      "opcodeBits": 16,
+      "prefix": 43394,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULDIV",
+      "min": 11109376,
+      "max": 11109632,
+      "opcodeBits": 16,
+      "prefix": 43396,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULDIVR",
+      "min": 11109632,
+      "max": 11109888,
+      "opcodeBits": 16,
+      "prefix": 43397,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULDIVC",
+      "min": 11109888,
+      "max": 11110144,
+      "opcodeBits": 16,
+      "prefix": 43398,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULMOD",
+      "min": 11110400,
+      "max": 11110656,
+      "opcodeBits": 16,
+      "prefix": 43400,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULMODR",
+      "min": 11110656,
+      "max": 11110912,
+      "opcodeBits": 16,
+      "prefix": 43401,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULMODC",
+      "min": 11110912,
+      "max": 11111168,
+      "opcodeBits": 16,
+      "prefix": 43402,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULDIVMOD",
+      "min": 11111424,
+      "max": 11111680,
+      "opcodeBits": 16,
+      "prefix": 43404,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULDIVMODR",
+      "min": 11111680,
+      "max": 11111936,
+      "opcodeBits": 16,
+      "prefix": 43405,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULDIVMODC",
+      "min": 11111936,
+      "max": 11112192,
+      "opcodeBits": 16,
+      "prefix": 43406,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULADDRSHIFTMOD",
+      "min": 11116544,
+      "max": 11116800,
+      "opcodeBits": 16,
+      "prefix": 43424,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULADDRSHIFTRMOD",
+      "min": 11116800,
+      "max": 11117056,
+      "opcodeBits": 16,
+      "prefix": 43425,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULADDRSHIFTCMOD",
+      "min": 11117056,
+      "max": 11117312,
+      "opcodeBits": 16,
+      "prefix": 43426,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULRSHIFT",
+      "min": 11117568,
+      "max": 11117824,
+      "opcodeBits": 16,
+      "prefix": 43428,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULRSHIFTR",
+      "min": 11117824,
+      "max": 11118080,
+      "opcodeBits": 16,
+      "prefix": 43429,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULRSHIFTC",
+      "min": 11118080,
+      "max": 11118336,
+      "opcodeBits": 16,
+      "prefix": 43430,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULMODPOW2",
+      "min": 11118592,
+      "max": 11118848,
+      "opcodeBits": 16,
+      "prefix": 43432,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULMODPOW2R",
+      "min": 11118848,
+      "max": 11119104,
+      "opcodeBits": 16,
+      "prefix": 43433,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULMODPOW2C",
+      "min": 11119104,
+      "max": 11119360,
+      "opcodeBits": 16,
+      "prefix": 43434,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULRSHIFTMOD",
+      "min": 11119616,
+      "max": 11119872,
+      "opcodeBits": 16,
+      "prefix": 43436,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULRSHIFTRMOD",
+      "min": 11119872,
+      "max": 11120128,
+      "opcodeBits": 16,
+      "prefix": 43437,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULRSHIFTCMOD",
+      "min": 11120128,
+      "max": 11120384,
+      "opcodeBits": 16,
+      "prefix": 43438,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MULADDRSHIFT_MOD",
+      "min": 11120640,
+      "max": 11120896,
+      "opcodeBits": 16,
+      "prefix": 43440,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MULADDRSHIFTR_MOD",
+      "min": 11120896,
+      "max": 11121152,
+      "opcodeBits": 16,
+      "prefix": 43441,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MULADDRSHIFTC_MOD",
+      "min": 11121152,
+      "max": 11121408,
+      "opcodeBits": 16,
+      "prefix": 43442,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MULRSHIFT_",
+      "min": 11121664,
+      "max": 11121920,
+      "opcodeBits": 16,
+      "prefix": 43444,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MULRSHIFTR_",
+      "min": 11121920,
+      "max": 11122176,
+      "opcodeBits": 16,
+      "prefix": 43445,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MULRSHIFTC_",
+      "min": 11122176,
+      "max": 11122432,
+      "opcodeBits": 16,
+      "prefix": 43446,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MULMODPOW2_",
+      "min": 11122688,
+      "max": 11122944,
+      "opcodeBits": 16,
+      "prefix": 43448,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MULMODPOW2R_",
+      "min": 11122944,
+      "max": 11123200,
+      "opcodeBits": 16,
+      "prefix": 43449,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MULMODPOW2C_",
+      "min": 11123200,
+      "max": 11123456,
+      "opcodeBits": 16,
+      "prefix": 43450,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MULRSHIFT_MOD",
+      "min": 11123712,
+      "max": 11123968,
+      "opcodeBits": 16,
+      "prefix": 43452,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MULRSHIFTR_MOD",
+      "min": 11123968,
+      "max": 11124224,
+      "opcodeBits": 16,
+      "prefix": 43453,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "MULRSHIFTC_MOD",
+      "min": 11124224,
+      "max": 11124480,
+      "opcodeBits": 16,
+      "prefix": 43454,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFTADDDIVMOD",
+      "min": 11124736,
+      "max": 11124992,
+      "opcodeBits": 16,
+      "prefix": 43456,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LSHIFTADDDIVMODR",
+      "min": 11124992,
+      "max": 11125248,
+      "opcodeBits": 16,
+      "prefix": 43457,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LSHIFTADDDIVMODC",
+      "min": 11125248,
+      "max": 11125504,
+      "opcodeBits": 16,
+      "prefix": 43458,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LSHIFTDIV",
+      "min": 11125760,
+      "max": 11126016,
+      "opcodeBits": 16,
+      "prefix": 43460,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LSHIFTDIVR",
+      "min": 11126016,
+      "max": 11126272,
+      "opcodeBits": 16,
+      "prefix": 43461,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LSHIFTDIVC",
+      "min": 11126272,
+      "max": 11126528,
+      "opcodeBits": 16,
+      "prefix": 43462,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LSHIFTMOD",
+      "min": 11126784,
+      "max": 11127040,
+      "opcodeBits": 16,
+      "prefix": 43464,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LSHIFTMODR",
+      "min": 11127040,
+      "max": 11127296,
+      "opcodeBits": 16,
+      "prefix": 43465,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LSHIFTMODC",
+      "min": 11127296,
+      "max": 11127552,
+      "opcodeBits": 16,
+      "prefix": 43466,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LSHIFTDIVMOD",
+      "min": 11127808,
+      "max": 11128064,
+      "opcodeBits": 16,
+      "prefix": 43468,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LSHIFTDIVMODR",
+      "min": 11128064,
+      "max": 11128320,
+      "opcodeBits": 16,
+      "prefix": 43469,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LSHIFTDIVMODC",
+      "min": 11128320,
+      "max": 11128576,
+      "opcodeBits": 16,
+      "prefix": 43470,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LSHIFT_ADDDIVMOD",
+      "min": 11128832,
+      "max": 11129088,
+      "opcodeBits": 16,
+      "prefix": 43472,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT_ADDDIVMODR",
+      "min": 11129088,
+      "max": 11129344,
+      "opcodeBits": 16,
+      "prefix": 43473,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT_ADDDIVMODC",
+      "min": 11129344,
+      "max": 11129600,
+      "opcodeBits": 16,
+      "prefix": 43474,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT_DIV",
+      "min": 11129856,
+      "max": 11130112,
+      "opcodeBits": 16,
+      "prefix": 43476,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT_DIVR",
+      "min": 11130112,
+      "max": 11130368,
+      "opcodeBits": 16,
+      "prefix": 43477,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT_DIVC",
+      "min": 11130368,
+      "max": 11130624,
+      "opcodeBits": 16,
+      "prefix": 43478,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT_MOD",
+      "min": 11130880,
+      "max": 11131136,
+      "opcodeBits": 16,
+      "prefix": 43480,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT_MODR",
+      "min": 11131136,
+      "max": 11131392,
+      "opcodeBits": 16,
+      "prefix": 43481,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT_MODC",
+      "min": 11131392,
+      "max": 11131648,
+      "opcodeBits": 16,
+      "prefix": 43482,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT_DIVMOD",
+      "min": 11131904,
+      "max": 11132160,
+      "opcodeBits": 16,
+      "prefix": 43484,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT_DIVMODR",
+      "min": 11132160,
+      "max": 11132416,
+      "opcodeBits": 16,
+      "prefix": 43485,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT_DIVMODC",
+      "min": 11132416,
+      "max": 11132672,
+      "opcodeBits": 16,
+      "prefix": 43486,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT",
+      "min": 11141120,
+      "max": 11206656,
+      "opcodeBits": 8,
+      "prefix": 170,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "RSHIFT",
+      "min": 11206656,
+      "max": 11272192,
+      "opcodeBits": 8,
+      "prefix": 171,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LSHIFT_VAR",
+      "min": 11272192,
+      "max": 11337728,
+      "opcodeBits": 8,
+      "prefix": 172,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RSHIFT_VAR",
+      "min": 11337728,
+      "max": 11403264,
+      "opcodeBits": 8,
+      "prefix": 173,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "POW2",
+      "min": 11403264,
+      "max": 11468800,
+      "opcodeBits": 8,
+      "prefix": 174,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "AND",
+      "min": 11534336,
+      "max": 11599872,
+      "opcodeBits": 8,
+      "prefix": 176,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "OR",
+      "min": 11599872,
+      "max": 11665408,
+      "opcodeBits": 8,
+      "prefix": 177,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "XOR",
+      "min": 11665408,
+      "max": 11730944,
+      "opcodeBits": 8,
+      "prefix": 178,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NOT",
+      "min": 11730944,
+      "max": 11796480,
+      "opcodeBits": 8,
+      "prefix": 179,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "FITS",
+      "min": 11796480,
+      "max": 11862016,
+      "opcodeBits": 8,
+      "prefix": 180,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "UFITS",
+      "min": 11862016,
+      "max": 11927552,
+      "opcodeBits": 8,
+      "prefix": 181,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "FITSX",
+      "min": 11927552,
+      "max": 11927808,
+      "opcodeBits": 16,
+      "prefix": 46592,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "UFITSX",
+      "min": 11927808,
+      "max": 11928064,
+      "opcodeBits": 16,
+      "prefix": 46593,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BITSIZE",
+      "min": 11928064,
+      "max": 11928320,
+      "opcodeBits": 16,
+      "prefix": 46594,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "UBITSIZE",
+      "min": 11928320,
+      "max": 11928576,
+      "opcodeBits": 16,
+      "prefix": 46595,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MIN",
+      "min": 11929600,
+      "max": 11929856,
+      "opcodeBits": 16,
+      "prefix": 46600,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MAX",
+      "min": 11929856,
+      "max": 11930112,
+      "opcodeBits": 16,
+      "prefix": 46601,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MINMAX",
+      "min": 11930112,
+      "max": 11930368,
+      "opcodeBits": 16,
+      "prefix": 46602,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ABS",
+      "min": 11930368,
+      "max": 11930624,
+      "opcodeBits": 16,
+      "prefix": 46603,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QADD",
+      "min": 12034048,
+      "max": 12034304,
+      "opcodeBits": 16,
+      "prefix": 47008,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QSUB",
+      "min": 12034304,
+      "max": 12034560,
+      "opcodeBits": 16,
+      "prefix": 47009,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QSUBR",
+      "min": 12034560,
+      "max": 12034816,
+      "opcodeBits": 16,
+      "prefix": 47010,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QNEGATE",
+      "min": 12034816,
+      "max": 12035072,
+      "opcodeBits": 16,
+      "prefix": 47011,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QINC",
+      "min": 12035072,
+      "max": 12035328,
+      "opcodeBits": 16,
+      "prefix": 47012,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QDEC",
+      "min": 12035328,
+      "max": 12035584,
+      "opcodeBits": 16,
+      "prefix": 47013,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QADDINT",
+      "min": 12035584,
+      "max": 12035840,
+      "opcodeBits": 16,
+      "prefix": 47014,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "QMULINT",
+      "min": 12035840,
+      "max": 12036096,
+      "opcodeBits": 16,
+      "prefix": 47015,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "QMUL",
+      "min": 12036096,
+      "max": 12036352,
+      "opcodeBits": 16,
+      "prefix": 47016,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QADDDIVMOD",
+      "min": 12036352,
+      "max": 12036353,
+      "opcodeBits": 24,
+      "prefix": 12036352,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QADDDIVMODR",
+      "min": 12036353,
+      "max": 12036354,
+      "opcodeBits": 24,
+      "prefix": 12036353,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QADDDIVMODC",
+      "min": 12036354,
+      "max": 12036355,
+      "opcodeBits": 24,
+      "prefix": 12036354,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QDIV",
+      "min": 12036356,
+      "max": 12036357,
+      "opcodeBits": 24,
+      "prefix": 12036356,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QDIVR",
+      "min": 12036357,
+      "max": 12036358,
+      "opcodeBits": 24,
+      "prefix": 12036357,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QDIVC",
+      "min": 12036358,
+      "max": 12036359,
+      "opcodeBits": 24,
+      "prefix": 12036358,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMOD",
+      "min": 12036360,
+      "max": 12036361,
+      "opcodeBits": 24,
+      "prefix": 12036360,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMODR",
+      "min": 12036361,
+      "max": 12036362,
+      "opcodeBits": 24,
+      "prefix": 12036361,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMODC",
+      "min": 12036362,
+      "max": 12036363,
+      "opcodeBits": 24,
+      "prefix": 12036362,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QDIVMOD",
+      "min": 12036364,
+      "max": 12036365,
+      "opcodeBits": 24,
+      "prefix": 12036364,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QDIVMODR",
+      "min": 12036365,
+      "max": 12036366,
+      "opcodeBits": 24,
+      "prefix": 12036365,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QDIVMODC",
+      "min": 12036366,
+      "max": 12036367,
+      "opcodeBits": 24,
+      "prefix": 12036366,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QADDRSHIFTMOD",
+      "min": 12036384,
+      "max": 12036385,
+      "opcodeBits": 24,
+      "prefix": 12036384,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QADDRSHIFTMODR",
+      "min": 12036385,
+      "max": 12036386,
+      "opcodeBits": 24,
+      "prefix": 12036385,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QADDRSHIFTMODC",
+      "min": 12036386,
+      "max": 12036387,
+      "opcodeBits": 24,
+      "prefix": 12036386,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QRSHIFT_ALT",
+      "min": 12036388,
+      "max": 12036389,
+      "opcodeBits": 24,
+      "prefix": 12036388,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QRSHIFTR",
+      "min": 12036389,
+      "max": 12036390,
+      "opcodeBits": 24,
+      "prefix": 12036389,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QRSHIFTC",
+      "min": 12036390,
+      "max": 12036391,
+      "opcodeBits": 24,
+      "prefix": 12036390,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMODPOW2",
+      "min": 12036392,
+      "max": 12036393,
+      "opcodeBits": 24,
+      "prefix": 12036392,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMODPOW2R",
+      "min": 12036393,
+      "max": 12036394,
+      "opcodeBits": 24,
+      "prefix": 12036393,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMODPOW2C",
+      "min": 12036394,
+      "max": 12036395,
+      "opcodeBits": 24,
+      "prefix": 12036394,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QRSHIFTMOD",
+      "min": 12036396,
+      "max": 12036397,
+      "opcodeBits": 24,
+      "prefix": 12036396,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QRSHIFTMODR",
+      "min": 12036397,
+      "max": 12036398,
+      "opcodeBits": 24,
+      "prefix": 12036397,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QRSHIFTMODC",
+      "min": 12036398,
+      "max": 12036399,
+      "opcodeBits": 24,
+      "prefix": 12036398,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULADDDIVMOD",
+      "min": 12036480,
+      "max": 12036481,
+      "opcodeBits": 24,
+      "prefix": 12036480,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULADDDIVMODR",
+      "min": 12036481,
+      "max": 12036482,
+      "opcodeBits": 24,
+      "prefix": 12036481,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULADDDIVMODC",
+      "min": 12036482,
+      "max": 12036483,
+      "opcodeBits": 24,
+      "prefix": 12036482,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULDIV",
+      "min": 12036484,
+      "max": 12036485,
+      "opcodeBits": 24,
+      "prefix": 12036484,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULDIVR",
+      "min": 12036485,
+      "max": 12036486,
+      "opcodeBits": 24,
+      "prefix": 12036485,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULDIVC",
+      "min": 12036486,
+      "max": 12036487,
+      "opcodeBits": 24,
+      "prefix": 12036486,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULMOD",
+      "min": 12036488,
+      "max": 12036489,
+      "opcodeBits": 24,
+      "prefix": 12036488,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULMODR",
+      "min": 12036489,
+      "max": 12036490,
+      "opcodeBits": 24,
+      "prefix": 12036489,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULMODC",
+      "min": 12036490,
+      "max": 12036491,
+      "opcodeBits": 24,
+      "prefix": 12036490,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULDIVMOD",
+      "min": 12036492,
+      "max": 12036493,
+      "opcodeBits": 24,
+      "prefix": 12036492,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULDIVMODR",
+      "min": 12036493,
+      "max": 12036494,
+      "opcodeBits": 24,
+      "prefix": 12036493,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULDIVMODC",
+      "min": 12036494,
+      "max": 12036495,
+      "opcodeBits": 24,
+      "prefix": 12036494,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULADDRSHIFTMOD",
+      "min": 12036512,
+      "max": 12036513,
+      "opcodeBits": 24,
+      "prefix": 12036512,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULADDRSHIFTRMOD",
+      "min": 12036513,
+      "max": 12036514,
+      "opcodeBits": 24,
+      "prefix": 12036513,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULADDRSHIFTCMOD",
+      "min": 12036514,
+      "max": 12036515,
+      "opcodeBits": 24,
+      "prefix": 12036514,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULRSHIFT",
+      "min": 12036516,
+      "max": 12036517,
+      "opcodeBits": 24,
+      "prefix": 12036516,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULRSHIFTR",
+      "min": 12036517,
+      "max": 12036518,
+      "opcodeBits": 24,
+      "prefix": 12036517,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULRSHIFTC",
+      "min": 12036518,
+      "max": 12036519,
+      "opcodeBits": 24,
+      "prefix": 12036518,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULMODPOW2",
+      "min": 12036520,
+      "max": 12036521,
+      "opcodeBits": 24,
+      "prefix": 12036520,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULMODPOW2R",
+      "min": 12036521,
+      "max": 12036522,
+      "opcodeBits": 24,
+      "prefix": 12036521,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULMODPOW2C",
+      "min": 12036522,
+      "max": 12036523,
+      "opcodeBits": 24,
+      "prefix": 12036522,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULRSHIFTMOD",
+      "min": 12036524,
+      "max": 12036525,
+      "opcodeBits": 24,
+      "prefix": 12036524,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULRSHIFTRMOD",
+      "min": 12036525,
+      "max": 12036526,
+      "opcodeBits": 24,
+      "prefix": 12036525,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMULRSHIFTCMOD",
+      "min": 12036526,
+      "max": 12036527,
+      "opcodeBits": 24,
+      "prefix": 12036526,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFTADDDIVMOD",
+      "min": 12036544,
+      "max": 12036545,
+      "opcodeBits": 24,
+      "prefix": 12036544,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFTADDDIVMODR",
+      "min": 12036545,
+      "max": 12036546,
+      "opcodeBits": 24,
+      "prefix": 12036545,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFTADDDIVMODC",
+      "min": 12036546,
+      "max": 12036547,
+      "opcodeBits": 24,
+      "prefix": 12036546,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFTDIV",
+      "min": 12036548,
+      "max": 12036549,
+      "opcodeBits": 24,
+      "prefix": 12036548,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFTDIVR",
+      "min": 12036549,
+      "max": 12036550,
+      "opcodeBits": 24,
+      "prefix": 12036549,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFTDIVC",
+      "min": 12036550,
+      "max": 12036551,
+      "opcodeBits": 24,
+      "prefix": 12036550,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFTMOD",
+      "min": 12036552,
+      "max": 12036553,
+      "opcodeBits": 24,
+      "prefix": 12036552,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFTMODR",
+      "min": 12036553,
+      "max": 12036554,
+      "opcodeBits": 24,
+      "prefix": 12036553,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFTMODC",
+      "min": 12036554,
+      "max": 12036555,
+      "opcodeBits": 24,
+      "prefix": 12036554,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFTDIVMOD",
+      "min": 12036556,
+      "max": 12036557,
+      "opcodeBits": 24,
+      "prefix": 12036556,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFTDIVMODR",
+      "min": 12036557,
+      "max": 12036558,
+      "opcodeBits": 24,
+      "prefix": 12036557,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFTDIVMODC",
+      "min": 12036558,
+      "max": 12036559,
+      "opcodeBits": 24,
+      "prefix": 12036558,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLSHIFT",
+      "min": 12036608,
+      "max": 12036864,
+      "opcodeBits": 16,
+      "prefix": 47018,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "QRSHIFT",
+      "min": 12036864,
+      "max": 12037120,
+      "opcodeBits": 16,
+      "prefix": 47019,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "QLSHIFT_VAR",
+      "min": 12037120,
+      "max": 12037376,
+      "opcodeBits": 16,
+      "prefix": 47020,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QRSHIFT_VAR",
+      "min": 12037376,
+      "max": 12037632,
+      "opcodeBits": 16,
+      "prefix": 47021,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QPOW2",
+      "min": 12037632,
+      "max": 12037888,
+      "opcodeBits": 16,
+      "prefix": 47022,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QAND",
+      "min": 12038144,
+      "max": 12038400,
+      "opcodeBits": 16,
+      "prefix": 47024,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QOR",
+      "min": 12038400,
+      "max": 12038656,
+      "opcodeBits": 16,
+      "prefix": 47025,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QXOR",
+      "min": 12038656,
+      "max": 12038912,
+      "opcodeBits": 16,
+      "prefix": 47026,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QNOT",
+      "min": 12038912,
+      "max": 12039168,
+      "opcodeBits": 16,
+      "prefix": 47027,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QFITS",
+      "min": 12039168,
+      "max": 12039424,
+      "opcodeBits": 16,
+      "prefix": 47028,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "QUFITS",
+      "min": 12039424,
+      "max": 12039680,
+      "opcodeBits": 16,
+      "prefix": 47029,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "QFITSX",
+      "min": 12039680,
+      "max": 12039681,
+      "opcodeBits": 24,
+      "prefix": 12039680,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QUFITSX",
+      "min": 12039681,
+      "max": 12039682,
+      "opcodeBits": 24,
+      "prefix": 12039681,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QBITSIZE",
+      "min": 12039682,
+      "max": 12039683,
+      "opcodeBits": 24,
+      "prefix": 12039682,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QUBITSIZE",
+      "min": 12039683,
+      "max": 12039684,
+      "opcodeBits": 24,
+      "prefix": 12039683,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMIN",
+      "min": 12039688,
+      "max": 12039689,
+      "opcodeBits": 24,
+      "prefix": 12039688,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMAX",
+      "min": 12039689,
+      "max": 12039690,
+      "opcodeBits": 24,
+      "prefix": 12039689,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QMINMAX",
+      "min": 12039690,
+      "max": 12039691,
+      "opcodeBits": 24,
+      "prefix": 12039690,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QABS",
+      "min": 12039691,
+      "max": 12039692,
+      "opcodeBits": 24,
+      "prefix": 12039691,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QSGN",
+      "min": 12040192,
+      "max": 12040448,
+      "opcodeBits": 16,
+      "prefix": 47032,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLESS",
+      "min": 12040448,
+      "max": 12040704,
+      "opcodeBits": 16,
+      "prefix": 47033,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QEQUAL",
+      "min": 12040704,
+      "max": 12040960,
+      "opcodeBits": 16,
+      "prefix": 47034,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QLEQ",
+      "min": 12040960,
+      "max": 12041216,
+      "opcodeBits": 16,
+      "prefix": 47035,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QGREATER",
+      "min": 12041216,
+      "max": 12041472,
+      "opcodeBits": 16,
+      "prefix": 47036,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QNEQ",
+      "min": 12041472,
+      "max": 12041728,
+      "opcodeBits": 16,
+      "prefix": 47037,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QGEQ",
+      "min": 12041728,
+      "max": 12041984,
+      "opcodeBits": 16,
+      "prefix": 47038,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QCMP",
+      "min": 12041984,
+      "max": 12042240,
+      "opcodeBits": 16,
+      "prefix": 47039,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "QEQINT",
+      "min": 12042240,
+      "max": 12042496,
+      "opcodeBits": 16,
+      "prefix": 47040,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "QLESSINT",
+      "min": 12042496,
+      "max": 12042752,
+      "opcodeBits": 16,
+      "prefix": 47041,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "QGTINT",
+      "min": 12042752,
+      "max": 12043008,
+      "opcodeBits": 16,
+      "prefix": 47042,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "QNEQINT",
+      "min": 12043008,
+      "max": 12043264,
+      "opcodeBits": 16,
+      "prefix": 47043,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "RIST255_QVALIDATE",
+      "min": 12056865,
+      "max": 12056866,
+      "opcodeBits": 24,
+      "prefix": 12056865,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RIST255_QADD",
+      "min": 12056866,
+      "max": 12056867,
+      "opcodeBits": 24,
+      "prefix": 12056866,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RIST255_QSUB",
+      "min": 12056867,
+      "max": 12056868,
+      "opcodeBits": 24,
+      "prefix": 12056867,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RIST255_QMUL",
+      "min": 12056868,
+      "max": 12056869,
+      "opcodeBits": 24,
+      "prefix": 12056868,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RIST255_QMULBASE",
+      "min": 12056869,
+      "max": 12056870,
+      "opcodeBits": 24,
+      "prefix": 12056869,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SGN",
+      "min": 12058624,
+      "max": 12124160,
+      "opcodeBits": 8,
+      "prefix": 184,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LESS",
+      "min": 12124160,
+      "max": 12189696,
+      "opcodeBits": 8,
+      "prefix": 185,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "EQUAL",
+      "min": 12189696,
+      "max": 12255232,
+      "opcodeBits": 8,
+      "prefix": 186,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LEQ",
+      "min": 12255232,
+      "max": 12320768,
+      "opcodeBits": 8,
+      "prefix": 187,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GREATER",
+      "min": 12320768,
+      "max": 12386304,
+      "opcodeBits": 8,
+      "prefix": 188,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NEQ",
+      "min": 12386304,
+      "max": 12451840,
+      "opcodeBits": 8,
+      "prefix": 189,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GEQ",
+      "min": 12451840,
+      "max": 12517376,
+      "opcodeBits": 8,
+      "prefix": 190,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CMP",
+      "min": 12517376,
+      "max": 12582912,
+      "opcodeBits": 8,
+      "prefix": 191,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "EQINT",
+      "min": 12582912,
+      "max": 12648448,
+      "opcodeBits": 8,
+      "prefix": 192,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "LESSINT",
+      "min": 12648448,
+      "max": 12713984,
+      "opcodeBits": 8,
+      "prefix": 193,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "GTINT",
+      "min": 12713984,
+      "max": 12779520,
+      "opcodeBits": 8,
+      "prefix": 194,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "NEQINT",
+      "min": 12779520,
+      "max": 12845056,
+      "opcodeBits": 8,
+      "prefix": 195,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "int",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "ISNAN",
+      "min": 12845056,
+      "max": 12910592,
+      "opcodeBits": 8,
+      "prefix": 196,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CHKNAN",
+      "min": 12910592,
+      "max": 12976128,
+      "opcodeBits": 8,
+      "prefix": 197,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SEMPTY",
+      "min": 13041664,
+      "max": 13041920,
+      "opcodeBits": 16,
+      "prefix": 50944,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDEMPTY",
+      "min": 13041920,
+      "max": 13042176,
+      "opcodeBits": 16,
+      "prefix": 50945,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SREMPTY",
+      "min": 13042176,
+      "max": 13042432,
+      "opcodeBits": 16,
+      "prefix": 50946,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDFIRST",
+      "min": 13042432,
+      "max": 13042688,
+      "opcodeBits": 16,
+      "prefix": 50947,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDLEXCMP",
+      "min": 13042688,
+      "max": 13042944,
+      "opcodeBits": 16,
+      "prefix": 50948,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDEQ",
+      "min": 13042944,
+      "max": 13043200,
+      "opcodeBits": 16,
+      "prefix": 50949,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDPFX",
+      "min": 13043712,
+      "max": 13043968,
+      "opcodeBits": 16,
+      "prefix": 50952,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDPFXREV",
+      "min": 13043968,
+      "max": 13044224,
+      "opcodeBits": 16,
+      "prefix": 50953,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDPPFX",
+      "min": 13044224,
+      "max": 13044480,
+      "opcodeBits": 16,
+      "prefix": 50954,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDPPFXREV",
+      "min": 13044480,
+      "max": 13044736,
+      "opcodeBits": 16,
+      "prefix": 50955,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDSFX",
+      "min": 13044736,
+      "max": 13044992,
+      "opcodeBits": 16,
+      "prefix": 50956,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDSFXREV",
+      "min": 13044992,
+      "max": 13045248,
+      "opcodeBits": 16,
+      "prefix": 50957,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDPSFX",
+      "min": 13045248,
+      "max": 13045504,
+      "opcodeBits": 16,
+      "prefix": 50958,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDPSFXREV",
+      "min": 13045504,
+      "max": 13045760,
+      "opcodeBits": 16,
+      "prefix": 50959,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDCNTLEAD0",
+      "min": 13045760,
+      "max": 13046016,
+      "opcodeBits": 16,
+      "prefix": 50960,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDCNTLEAD1",
+      "min": 13046016,
+      "max": 13046272,
+      "opcodeBits": 16,
+      "prefix": 50961,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDCNTTRAIL0",
+      "min": 13046272,
+      "max": 13046528,
+      "opcodeBits": 16,
+      "prefix": 50962,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDCNTTRAIL1",
+      "min": 13046528,
+      "max": 13046784,
+      "opcodeBits": 16,
+      "prefix": 50963,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "NEWC",
+      "min": 13107200,
+      "max": 13172736,
+      "opcodeBits": 8,
+      "prefix": 200,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ENDC",
+      "min": 13172736,
+      "max": 13238272,
+      "opcodeBits": 8,
+      "prefix": 201,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STI",
+      "min": 13238272,
+      "max": 13303808,
+      "opcodeBits": 8,
+      "prefix": 202,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "STU",
+      "min": 13303808,
+      "max": 13369344,
+      "opcodeBits": 8,
+      "prefix": 203,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "STREF",
+      "min": 13369344,
+      "max": 13434880,
+      "opcodeBits": 8,
+      "prefix": 204,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ENDCST",
+      "min": 13434880,
+      "max": 13500416,
+      "opcodeBits": 8,
+      "prefix": 205,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STSLICE",
+      "min": 13500416,
+      "max": 13565952,
+      "opcodeBits": 8,
+      "prefix": 206,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STIX",
+      "min": 13565952,
+      "max": 13566208,
+      "opcodeBits": 16,
+      "prefix": 52992,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STUX",
+      "min": 13566208,
+      "max": 13566464,
+      "opcodeBits": 16,
+      "prefix": 52993,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STIXR",
+      "min": 13566464,
+      "max": 13566720,
+      "opcodeBits": 16,
+      "prefix": 52994,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STUXR",
+      "min": 13566720,
+      "max": 13566976,
+      "opcodeBits": 16,
+      "prefix": 52995,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STIXQ",
+      "min": 13566976,
+      "max": 13567232,
+      "opcodeBits": 16,
+      "prefix": 52996,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STUXQ",
+      "min": 13567232,
+      "max": 13567488,
+      "opcodeBits": 16,
+      "prefix": 52997,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STIXRQ",
+      "min": 13567488,
+      "max": 13567744,
+      "opcodeBits": 16,
+      "prefix": 52998,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STUXRQ",
+      "min": 13567744,
+      "max": 13568000,
+      "opcodeBits": 16,
+      "prefix": 52999,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STI_ALT",
+      "min": 13568000,
+      "max": 13568256,
+      "opcodeBits": 16,
+      "prefix": 53000,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "STU_ALT",
+      "min": 13568256,
+      "max": 13568512,
+      "opcodeBits": 16,
+      "prefix": 53001,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "STIR",
+      "min": 13568512,
+      "max": 13568768,
+      "opcodeBits": 16,
+      "prefix": 53002,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "STUR",
+      "min": 13568768,
+      "max": 13569024,
+      "opcodeBits": 16,
+      "prefix": 53003,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "STIQ",
+      "min": 13569024,
+      "max": 13569280,
+      "opcodeBits": 16,
+      "prefix": 53004,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "STUQ",
+      "min": 13569280,
+      "max": 13569536,
+      "opcodeBits": 16,
+      "prefix": 53005,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "STIRQ",
+      "min": 13569536,
+      "max": 13569792,
+      "opcodeBits": 16,
+      "prefix": 53006,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "STURQ",
+      "min": 13569792,
+      "max": 13570048,
+      "opcodeBits": 16,
+      "prefix": 53007,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "STREF_ALT",
+      "min": 13570048,
+      "max": 13570304,
+      "opcodeBits": 16,
+      "prefix": 53008,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STBREF",
+      "min": 13570304,
+      "max": 13570560,
+      "opcodeBits": 16,
+      "prefix": 53009,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STSLICE_ALT",
+      "min": 13570560,
+      "max": 13570816,
+      "opcodeBits": 16,
+      "prefix": 53010,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STB",
+      "min": 13570816,
+      "max": 13571072,
+      "opcodeBits": 16,
+      "prefix": 53011,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STREFR",
+      "min": 13571072,
+      "max": 13571328,
+      "opcodeBits": 16,
+      "prefix": 53012,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STBREFR",
+      "min": 13571328,
+      "max": 13571584,
+      "opcodeBits": 16,
+      "prefix": 53013,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STSLICER",
+      "min": 13571584,
+      "max": 13571840,
+      "opcodeBits": 16,
+      "prefix": 53014,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STBR",
+      "min": 13571840,
+      "max": 13572096,
+      "opcodeBits": 16,
+      "prefix": 53015,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STREFQ",
+      "min": 13572096,
+      "max": 13572352,
+      "opcodeBits": 16,
+      "prefix": 53016,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STBREFQ",
+      "min": 13572352,
+      "max": 13572608,
+      "opcodeBits": 16,
+      "prefix": 53017,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STSLICEQ",
+      "min": 13572608,
+      "max": 13572864,
+      "opcodeBits": 16,
+      "prefix": 53018,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STBQ",
+      "min": 13572864,
+      "max": 13573120,
+      "opcodeBits": 16,
+      "prefix": 53019,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STREFRQ",
+      "min": 13573120,
+      "max": 13573376,
+      "opcodeBits": 16,
+      "prefix": 53020,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STBREFRQ",
+      "min": 13573376,
+      "max": 13573632,
+      "opcodeBits": 16,
+      "prefix": 53021,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STSLICERQ",
+      "min": 13573632,
+      "max": 13573888,
+      "opcodeBits": 16,
+      "prefix": 53022,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STBRQ",
+      "min": 13573888,
+      "max": 13574144,
+      "opcodeBits": 16,
+      "prefix": 53023,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STREFCONST",
+      "min": 13574144,
+      "max": 13574400,
+      "opcodeBits": 16,
+      "prefix": 53024,
+      "kind": "ext-range",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "STREF2CONST",
+      "min": 13574400,
+      "max": 13574656,
+      "opcodeBits": 16,
+      "prefix": 53025,
+      "kind": "ext-range",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        },
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "ENDXC",
+      "min": 13574912,
+      "max": 13575168,
+      "opcodeBits": 16,
+      "prefix": 53027,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STILE4",
+      "min": 13576192,
+      "max": 13576448,
+      "opcodeBits": 16,
+      "prefix": 53032,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STULE4",
+      "min": 13576448,
+      "max": 13576704,
+      "opcodeBits": 16,
+      "prefix": 53033,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STILE8",
+      "min": 13576704,
+      "max": 13576960,
+      "opcodeBits": 16,
+      "prefix": 53034,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STULE8",
+      "min": 13576960,
+      "max": 13577216,
+      "opcodeBits": 16,
+      "prefix": 53035,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BDEPTH",
+      "min": 13578240,
+      "max": 13578496,
+      "opcodeBits": 16,
+      "prefix": 53040,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BBITS",
+      "min": 13578496,
+      "max": 13578752,
+      "opcodeBits": 16,
+      "prefix": 53041,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BREFS",
+      "min": 13578752,
+      "max": 13579008,
+      "opcodeBits": 16,
+      "prefix": 53042,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BBITREFS",
+      "min": 13579008,
+      "max": 13579264,
+      "opcodeBits": 16,
+      "prefix": 53043,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BREMBITS",
+      "min": 13579520,
+      "max": 13579776,
+      "opcodeBits": 16,
+      "prefix": 53045,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BREMREFS",
+      "min": 13579776,
+      "max": 13580032,
+      "opcodeBits": 16,
+      "prefix": 53046,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BREMBITREFS",
+      "min": 13580032,
+      "max": 13580288,
+      "opcodeBits": 16,
+      "prefix": 53047,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BCHKBITS",
+      "min": 13580288,
+      "max": 13580544,
+      "opcodeBits": 16,
+      "prefix": 53048,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "BCHKBITS_VAR",
+      "min": 13580544,
+      "max": 13580800,
+      "opcodeBits": 16,
+      "prefix": 53049,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BCHKREFS",
+      "min": 13580800,
+      "max": 13581056,
+      "opcodeBits": 16,
+      "prefix": 53050,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BCHKBITREFS",
+      "min": 13581056,
+      "max": 13581312,
+      "opcodeBits": 16,
+      "prefix": 53051,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BCHKBITSQ",
+      "min": 13581312,
+      "max": 13581568,
+      "opcodeBits": 16,
+      "prefix": 53052,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "BCHKBITSQ_VAR",
+      "min": 13581568,
+      "max": 13581824,
+      "opcodeBits": 16,
+      "prefix": 53053,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BCHKREFSQ",
+      "min": 13581824,
+      "max": 13582080,
+      "opcodeBits": 16,
+      "prefix": 53054,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BCHKBITREFSQ",
+      "min": 13582080,
+      "max": 13582336,
+      "opcodeBits": 16,
+      "prefix": 53055,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STZEROES",
+      "min": 13582336,
+      "max": 13582592,
+      "opcodeBits": 16,
+      "prefix": 53056,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STONES",
+      "min": 13582592,
+      "max": 13582848,
+      "opcodeBits": 16,
+      "prefix": 53057,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STSAME",
+      "min": 13582848,
+      "max": 13583104,
+      "opcodeBits": 16,
+      "prefix": 53058,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BTOS",
+      "min": 13586432,
+      "max": 13586688,
+      "opcodeBits": 16,
+      "prefix": 53072,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STSLICECONST",
+      "min": 13598720,
+      "max": 13631488,
+      "opcodeBits": 9,
+      "prefix": 415,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "slice",
+          "pad": 2,
+          "refs": {
+            "type": "uint",
+            "len": 2
+          },
+          "bits": {
+            "type": "uint",
+            "len": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "CTOS",
+      "min": 13631488,
+      "max": 13697024,
+      "opcodeBits": 8,
+      "prefix": 208,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ENDS",
+      "min": 13697024,
+      "max": 13762560,
+      "opcodeBits": 8,
+      "prefix": 209,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDI",
+      "min": 13762560,
+      "max": 13828096,
+      "opcodeBits": 8,
+      "prefix": 210,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LDU",
+      "min": 13828096,
+      "max": 13893632,
+      "opcodeBits": 8,
+      "prefix": 211,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LDREF",
+      "min": 13893632,
+      "max": 13959168,
+      "opcodeBits": 8,
+      "prefix": 212,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDREFRTOS",
+      "min": 13959168,
+      "max": 14024704,
+      "opcodeBits": 8,
+      "prefix": 213,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDSLICE",
+      "min": 14024704,
+      "max": 14090240,
+      "opcodeBits": 8,
+      "prefix": 214,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LDIX",
+      "min": 14090240,
+      "max": 14090496,
+      "opcodeBits": 16,
+      "prefix": 55040,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDUX",
+      "min": 14090496,
+      "max": 14090752,
+      "opcodeBits": 16,
+      "prefix": 55041,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDIX",
+      "min": 14090752,
+      "max": 14091008,
+      "opcodeBits": 16,
+      "prefix": 55042,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDUX",
+      "min": 14091008,
+      "max": 14091264,
+      "opcodeBits": 16,
+      "prefix": 55043,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDIXQ",
+      "min": 14091264,
+      "max": 14091520,
+      "opcodeBits": 16,
+      "prefix": 55044,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDUXQ",
+      "min": 14091520,
+      "max": 14091776,
+      "opcodeBits": 16,
+      "prefix": 55045,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDIXQ",
+      "min": 14091776,
+      "max": 14092032,
+      "opcodeBits": 16,
+      "prefix": 55046,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDUXQ",
+      "min": 14092032,
+      "max": 14092288,
+      "opcodeBits": 16,
+      "prefix": 55047,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDI_ALT",
+      "min": 14092288,
+      "max": 14092544,
+      "opcodeBits": 16,
+      "prefix": 55048,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LDU_ALT",
+      "min": 14092544,
+      "max": 14092800,
+      "opcodeBits": 16,
+      "prefix": 55049,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "PLDI",
+      "min": 14092800,
+      "max": 14093056,
+      "opcodeBits": 16,
+      "prefix": 55050,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "PLDU",
+      "min": 14093056,
+      "max": 14093312,
+      "opcodeBits": 16,
+      "prefix": 55051,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LDIQ",
+      "min": 14093312,
+      "max": 14093568,
+      "opcodeBits": 16,
+      "prefix": 55052,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LDUQ",
+      "min": 14093568,
+      "max": 14093824,
+      "opcodeBits": 16,
+      "prefix": 55053,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "PLDIQ",
+      "min": 14093824,
+      "max": 14094080,
+      "opcodeBits": 16,
+      "prefix": 55054,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "PLDUQ",
+      "min": 14094080,
+      "max": 14094336,
+      "opcodeBits": 16,
+      "prefix": 55055,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "PLDUZ",
+      "min": 14094336,
+      "max": 14096384,
+      "opcodeBits": 13,
+      "prefix": 6882,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "plduzArg"
+        }
+      ]
+    },
+    {
+      "name": "LDSLICEX",
+      "min": 14096384,
+      "max": 14096640,
+      "opcodeBits": 16,
+      "prefix": 55064,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDSLICEX",
+      "min": 14096640,
+      "max": 14096896,
+      "opcodeBits": 16,
+      "prefix": 55065,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDSLICEXQ",
+      "min": 14096896,
+      "max": 14097152,
+      "opcodeBits": 16,
+      "prefix": 55066,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDSLICEXQ",
+      "min": 14097152,
+      "max": 14097408,
+      "opcodeBits": 16,
+      "prefix": 55067,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDSLICE_ALT",
+      "min": 14097408,
+      "max": 14097664,
+      "opcodeBits": 16,
+      "prefix": 55068,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "PLDSLICE",
+      "min": 14097664,
+      "max": 14097920,
+      "opcodeBits": 16,
+      "prefix": 55069,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "LDSLICEQ",
+      "min": 14097920,
+      "max": 14098176,
+      "opcodeBits": 16,
+      "prefix": 55070,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "PLDSLICEQ",
+      "min": 14098176,
+      "max": 14098432,
+      "opcodeBits": 16,
+      "prefix": 55071,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "SDCUTFIRST",
+      "min": 14098432,
+      "max": 14098688,
+      "opcodeBits": 16,
+      "prefix": 55072,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDSKIPFIRST",
+      "min": 14098688,
+      "max": 14098944,
+      "opcodeBits": 16,
+      "prefix": 55073,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDCUTLAST",
+      "min": 14098944,
+      "max": 14099200,
+      "opcodeBits": 16,
+      "prefix": 55074,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDSKIPLAST",
+      "min": 14099200,
+      "max": 14099456,
+      "opcodeBits": 16,
+      "prefix": 55075,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDSUBSTR",
+      "min": 14099456,
+      "max": 14099712,
+      "opcodeBits": 16,
+      "prefix": 55076,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDBEGINSX",
+      "min": 14099968,
+      "max": 14100224,
+      "opcodeBits": 16,
+      "prefix": 55078,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDBEGINSXQ",
+      "min": 14100224,
+      "max": 14100480,
+      "opcodeBits": 16,
+      "prefix": 55079,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDBEGINS",
+      "min": 14100480,
+      "max": 14101504,
+      "opcodeBits": 14,
+      "prefix": 13770,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "slice",
+          "pad": 3,
+          "refs": {
+            "type": "uint",
+            "len": 0
+          },
+          "bits": {
+            "type": "uint",
+            "len": 7
+          }
+        }
+      ]
+    },
+    {
+      "name": "SDBEGINSQ",
+      "min": 14101504,
+      "max": 14102528,
+      "opcodeBits": 14,
+      "prefix": 13771,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "slice",
+          "pad": 3,
+          "refs": {
+            "type": "uint",
+            "len": 0
+          },
+          "bits": {
+            "type": "uint",
+            "len": 7
+          }
+        }
+      ]
+    },
+    {
+      "name": "SCUTFIRST",
+      "min": 14102528,
+      "max": 14102784,
+      "opcodeBits": 16,
+      "prefix": 55088,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SSKIPFIRST",
+      "min": 14102784,
+      "max": 14103040,
+      "opcodeBits": 16,
+      "prefix": 55089,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SCUTLAST",
+      "min": 14103040,
+      "max": 14103296,
+      "opcodeBits": 16,
+      "prefix": 55090,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SSKIPLAST",
+      "min": 14103296,
+      "max": 14103552,
+      "opcodeBits": 16,
+      "prefix": 55091,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SUBSLICE",
+      "min": 14103552,
+      "max": 14103808,
+      "opcodeBits": 16,
+      "prefix": 55092,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SPLIT",
+      "min": 14104064,
+      "max": 14104320,
+      "opcodeBits": 16,
+      "prefix": 55094,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SPLITQ",
+      "min": 14104320,
+      "max": 14104576,
+      "opcodeBits": 16,
+      "prefix": 55095,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "XCTOS",
+      "min": 14104832,
+      "max": 14105088,
+      "opcodeBits": 16,
+      "prefix": 55097,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "XLOAD",
+      "min": 14105088,
+      "max": 14105344,
+      "opcodeBits": 16,
+      "prefix": 55098,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "XLOADQ",
+      "min": 14105344,
+      "max": 14105600,
+      "opcodeBits": 16,
+      "prefix": 55099,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SCHKBITS",
+      "min": 14106880,
+      "max": 14107136,
+      "opcodeBits": 16,
+      "prefix": 55105,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SCHKREFS",
+      "min": 14107136,
+      "max": 14107392,
+      "opcodeBits": 16,
+      "prefix": 55106,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SCHKBITREFS",
+      "min": 14107392,
+      "max": 14107648,
+      "opcodeBits": 16,
+      "prefix": 55107,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SCHKBITSQ",
+      "min": 14107904,
+      "max": 14108160,
+      "opcodeBits": 16,
+      "prefix": 55109,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SCHKREFSQ",
+      "min": 14108160,
+      "max": 14108416,
+      "opcodeBits": 16,
+      "prefix": 55110,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SCHKBITREFSQ",
+      "min": 14108416,
+      "max": 14108672,
+      "opcodeBits": 16,
+      "prefix": 55111,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDREFVAR",
+      "min": 14108672,
+      "max": 14108928,
+      "opcodeBits": 16,
+      "prefix": 55112,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SBITS",
+      "min": 14108928,
+      "max": 14109184,
+      "opcodeBits": 16,
+      "prefix": 55113,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SREFS",
+      "min": 14109184,
+      "max": 14109440,
+      "opcodeBits": 16,
+      "prefix": 55114,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SBITREFS",
+      "min": 14109440,
+      "max": 14109696,
+      "opcodeBits": 16,
+      "prefix": 55115,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDREFIDX",
+      "min": 14109696,
+      "max": 14110720,
+      "opcodeBits": 14,
+      "prefix": 13779,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 2
+        }
+      ]
+    },
+    {
+      "name": "LDILE4",
+      "min": 14110720,
+      "max": 14110976,
+      "opcodeBits": 16,
+      "prefix": 55120,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDULE4",
+      "min": 14110976,
+      "max": 14111232,
+      "opcodeBits": 16,
+      "prefix": 55121,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDILE8",
+      "min": 14111232,
+      "max": 14111488,
+      "opcodeBits": 16,
+      "prefix": 55122,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDULE8",
+      "min": 14111488,
+      "max": 14111744,
+      "opcodeBits": 16,
+      "prefix": 55123,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDILE4",
+      "min": 14111744,
+      "max": 14112000,
+      "opcodeBits": 16,
+      "prefix": 55124,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDULE4",
+      "min": 14112000,
+      "max": 14112256,
+      "opcodeBits": 16,
+      "prefix": 55125,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDILE8",
+      "min": 14112256,
+      "max": 14112512,
+      "opcodeBits": 16,
+      "prefix": 55126,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDULE8",
+      "min": 14112512,
+      "max": 14112768,
+      "opcodeBits": 16,
+      "prefix": 55127,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDILE4Q",
+      "min": 14112768,
+      "max": 14113024,
+      "opcodeBits": 16,
+      "prefix": 55128,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDULE4Q",
+      "min": 14113024,
+      "max": 14113280,
+      "opcodeBits": 16,
+      "prefix": 55129,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDILE8Q",
+      "min": 14113280,
+      "max": 14113536,
+      "opcodeBits": 16,
+      "prefix": 55130,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDULE8Q",
+      "min": 14113536,
+      "max": 14113792,
+      "opcodeBits": 16,
+      "prefix": 55131,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDILE4Q",
+      "min": 14113792,
+      "max": 14114048,
+      "opcodeBits": 16,
+      "prefix": 55132,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDULE4Q",
+      "min": 14114048,
+      "max": 14114304,
+      "opcodeBits": 16,
+      "prefix": 55133,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDILE8Q",
+      "min": 14114304,
+      "max": 14114560,
+      "opcodeBits": 16,
+      "prefix": 55134,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDULE8Q",
+      "min": 14114560,
+      "max": 14114816,
+      "opcodeBits": 16,
+      "prefix": 55135,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDZEROES",
+      "min": 14114816,
+      "max": 14115072,
+      "opcodeBits": 16,
+      "prefix": 55136,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDONES",
+      "min": 14115072,
+      "max": 14115328,
+      "opcodeBits": 16,
+      "prefix": 55137,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDSAME",
+      "min": 14115328,
+      "max": 14115584,
+      "opcodeBits": 16,
+      "prefix": 55138,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDEPTH",
+      "min": 14115840,
+      "max": 14116096,
+      "opcodeBits": 16,
+      "prefix": 55140,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CDEPTH",
+      "min": 14116096,
+      "max": 14116352,
+      "opcodeBits": 16,
+      "prefix": 55141,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CLEVEL",
+      "min": 14116352,
+      "max": 14116608,
+      "opcodeBits": 16,
+      "prefix": 55142,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CLEVELMASK",
+      "min": 14116608,
+      "max": 14116864,
+      "opcodeBits": 16,
+      "prefix": 55143,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CHASHI",
+      "min": 14116864,
+      "max": 14117888,
+      "opcodeBits": 14,
+      "prefix": 13786,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 2
+        }
+      ]
+    },
+    {
+      "name": "CDEPTHI",
+      "min": 14117888,
+      "max": 14118912,
+      "opcodeBits": 14,
+      "prefix": 13787,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 2
+        }
+      ]
+    },
+    {
+      "name": "CHASHIX",
+      "min": 14118912,
+      "max": 14119168,
+      "opcodeBits": 16,
+      "prefix": 55152,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CDEPTHIX",
+      "min": 14119168,
+      "max": 14119424,
+      "opcodeBits": 16,
+      "prefix": 55153,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "EXECUTE",
+      "min": 14155776,
+      "max": 14221312,
+      "opcodeBits": 8,
+      "prefix": 216,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "JMPX",
+      "min": 14221312,
+      "max": 14286848,
+      "opcodeBits": 8,
+      "prefix": 217,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CALLXARGS_1",
+      "min": 14286848,
+      "max": 14352384,
+      "opcodeBits": 8,
+      "prefix": 218,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        },
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "CALLXARGS",
+      "min": 14352384,
+      "max": 14356480,
+      "opcodeBits": 12,
+      "prefix": 3504,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        },
+        {
+          "type": "minusOne"
+        }
+      ]
+    },
+    {
+      "name": "JMPXARGS",
+      "min": 14356480,
+      "max": 14360576,
+      "opcodeBits": 12,
+      "prefix": 3505,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "RETARGS",
+      "min": 14360576,
+      "max": 14364672,
+      "opcodeBits": 12,
+      "prefix": 3506,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "RET",
+      "min": 14364672,
+      "max": 14364928,
+      "opcodeBits": 16,
+      "prefix": 56112,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RETALT",
+      "min": 14364928,
+      "max": 14365184,
+      "opcodeBits": 16,
+      "prefix": 56113,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RETBOOL",
+      "min": 14365184,
+      "max": 14365440,
+      "opcodeBits": 16,
+      "prefix": 56114,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CALLCC",
+      "min": 14365696,
+      "max": 14365952,
+      "opcodeBits": 16,
+      "prefix": 56116,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "JMPXDATA",
+      "min": 14365952,
+      "max": 14366208,
+      "opcodeBits": 16,
+      "prefix": 56117,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CALLCCARGS",
+      "min": 14366208,
+      "max": 14366464,
+      "opcodeBits": 16,
+      "prefix": 56118,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        },
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "CALLXVARARGS",
+      "min": 14366720,
+      "max": 14366976,
+      "opcodeBits": 16,
+      "prefix": 56120,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RETVARARGS",
+      "min": 14366976,
+      "max": 14367232,
+      "opcodeBits": 16,
+      "prefix": 56121,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "JMPXVARARGS",
+      "min": 14367232,
+      "max": 14367488,
+      "opcodeBits": 16,
+      "prefix": 56122,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CALLCCVARARGS",
+      "min": 14367488,
+      "max": 14367744,
+      "opcodeBits": 16,
+      "prefix": 56123,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CALLREF",
+      "min": 14367744,
+      "max": 14368000,
+      "opcodeBits": 16,
+      "prefix": 56124,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "JMPREF",
+      "min": 14368000,
+      "max": 14368256,
+      "opcodeBits": 16,
+      "prefix": 56125,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "JMPREFDATA",
+      "min": 14368256,
+      "max": 14368512,
+      "opcodeBits": 16,
+      "prefix": 56126,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "RETDATA",
+      "min": 14368512,
+      "max": 14368768,
+      "opcodeBits": 16,
+      "prefix": 56127,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RUNVM",
+      "min": 14368768,
+      "max": 14372864,
+      "opcodeBits": 12,
+      "prefix": 3508,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 12
+        }
+      ]
+    },
+    {
+      "name": "RUNVMX",
+      "min": 14372864,
+      "max": 14373120,
+      "opcodeBits": 16,
+      "prefix": 56144,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "IFRET",
+      "min": 14417920,
+      "max": 14483456,
+      "opcodeBits": 8,
+      "prefix": 220,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "IFNOTRET",
+      "min": 14483456,
+      "max": 14548992,
+      "opcodeBits": 8,
+      "prefix": 221,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "IF",
+      "min": 14548992,
+      "max": 14614528,
+      "opcodeBits": 8,
+      "prefix": 222,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "IFNOT",
+      "min": 14614528,
+      "max": 14680064,
+      "opcodeBits": 8,
+      "prefix": 223,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "IFJMP",
+      "min": 14680064,
+      "max": 14745600,
+      "opcodeBits": 8,
+      "prefix": 224,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "IFNOTJMP",
+      "min": 14745600,
+      "max": 14811136,
+      "opcodeBits": 8,
+      "prefix": 225,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "IFELSE",
+      "min": 14811136,
+      "max": 14876672,
+      "opcodeBits": 8,
+      "prefix": 226,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "IFREF",
+      "min": 14876672,
+      "max": 14876928,
+      "opcodeBits": 16,
+      "prefix": 58112,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "IFNOTREF",
+      "min": 14876928,
+      "max": 14877184,
+      "opcodeBits": 16,
+      "prefix": 58113,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "IFJMPREF",
+      "min": 14877184,
+      "max": 14877440,
+      "opcodeBits": 16,
+      "prefix": 58114,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "IFNOTJMPREF",
+      "min": 14877440,
+      "max": 14877696,
+      "opcodeBits": 16,
+      "prefix": 58115,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "CONDSEL",
+      "min": 14877696,
+      "max": 14877952,
+      "opcodeBits": 16,
+      "prefix": 58116,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CONDSELCHK",
+      "min": 14877952,
+      "max": 14878208,
+      "opcodeBits": 16,
+      "prefix": 58117,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "IFRETALT",
+      "min": 14878720,
+      "max": 14878976,
+      "opcodeBits": 16,
+      "prefix": 58120,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "IFNOTRETALT",
+      "min": 14878976,
+      "max": 14879232,
+      "opcodeBits": 16,
+      "prefix": 58121,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "IFREFELSE",
+      "min": 14880000,
+      "max": 14880256,
+      "opcodeBits": 16,
+      "prefix": 58125,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "IFELSEREF",
+      "min": 14880256,
+      "max": 14880512,
+      "opcodeBits": 16,
+      "prefix": 58126,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "IFREFELSEREF",
+      "min": 14880512,
+      "max": 14880768,
+      "opcodeBits": 16,
+      "prefix": 58127,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "refCodeSlice"
+        },
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "REPEATBRK",
+      "min": 14881792,
+      "max": 14882048,
+      "opcodeBits": 16,
+      "prefix": 58132,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "REPEATENDBRK",
+      "min": 14882048,
+      "max": 14882304,
+      "opcodeBits": 16,
+      "prefix": 58133,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "UNTILBRK",
+      "min": 14882304,
+      "max": 14882560,
+      "opcodeBits": 16,
+      "prefix": 58134,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "UNTILENDBRK",
+      "min": 14882560,
+      "max": 14882816,
+      "opcodeBits": 16,
+      "prefix": 58135,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "WHILEBRK",
+      "min": 14882816,
+      "max": 14883072,
+      "opcodeBits": 16,
+      "prefix": 58136,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "WHILEENDBRK",
+      "min": 14883072,
+      "max": 14883328,
+      "opcodeBits": 16,
+      "prefix": 58137,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "AGAINBRK",
+      "min": 14883328,
+      "max": 14883584,
+      "opcodeBits": 16,
+      "prefix": 58138,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "AGAINENDBRK",
+      "min": 14883584,
+      "max": 14883840,
+      "opcodeBits": 16,
+      "prefix": 58139,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "IFBITJMP",
+      "min": 14909440,
+      "max": 14917632,
+      "opcodeBits": 11,
+      "prefix": 1820,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 5
+        }
+      ]
+    },
+    {
+      "name": "IFNBITJMP",
+      "min": 14917632,
+      "max": 14925824,
+      "opcodeBits": 11,
+      "prefix": 1821,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 5
+        }
+      ]
+    },
+    {
+      "name": "IFBITJMPREF",
+      "min": 14925824,
+      "max": 14934016,
+      "opcodeBits": 11,
+      "prefix": 1822,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "uint",
+          "len": 5
+        },
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "IFNBITJMPREF",
+      "min": 14934016,
+      "max": 14942208,
+      "opcodeBits": 11,
+      "prefix": 1823,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "uint",
+          "len": 5
+        },
+        {
+          "type": "refCodeSlice"
+        }
+      ]
+    },
+    {
+      "name": "REPEAT",
+      "min": 14942208,
+      "max": 15007744,
+      "opcodeBits": 8,
+      "prefix": 228,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "REPEATEND",
+      "min": 15007744,
+      "max": 15073280,
+      "opcodeBits": 8,
+      "prefix": 229,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "UNTIL",
+      "min": 15073280,
+      "max": 15138816,
+      "opcodeBits": 8,
+      "prefix": 230,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "UNTILEND",
+      "min": 15138816,
+      "max": 15204352,
+      "opcodeBits": 8,
+      "prefix": 231,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "WHILE",
+      "min": 15204352,
+      "max": 15269888,
+      "opcodeBits": 8,
+      "prefix": 232,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "WHILEEND",
+      "min": 15269888,
+      "max": 15335424,
+      "opcodeBits": 8,
+      "prefix": 233,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "AGAIN",
+      "min": 15335424,
+      "max": 15400960,
+      "opcodeBits": 8,
+      "prefix": 234,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "AGAINEND",
+      "min": 15400960,
+      "max": 15466496,
+      "opcodeBits": 8,
+      "prefix": 235,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETCONTARGS",
+      "min": 15466496,
+      "max": 15532032,
+      "opcodeBits": 8,
+      "prefix": 236,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        },
+        {
+          "type": "delta",
+          "delta": -1,
+          "arg": {
+            "type": "uint",
+            "len": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "RETURNARGS",
+      "min": 15532032,
+      "max": 15536128,
+      "opcodeBits": 12,
+      "prefix": 3792,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "RETURNVARARGS",
+      "min": 15536128,
+      "max": 15536384,
+      "opcodeBits": 16,
+      "prefix": 60688,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETCONTVARARGS",
+      "min": 15536384,
+      "max": 15536640,
+      "opcodeBits": 16,
+      "prefix": 60689,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETNUMVARARGS",
+      "min": 15536640,
+      "max": 15536896,
+      "opcodeBits": 16,
+      "prefix": 60690,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLESS",
+      "min": 15539712,
+      "max": 15539968,
+      "opcodeBits": 16,
+      "prefix": 60702,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLESSVARARGS",
+      "min": 15539968,
+      "max": 15540224,
+      "opcodeBits": 16,
+      "prefix": 60703,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PUSHCTR",
+      "min": 15548416,
+      "max": 15550464,
+      "opcodeBits": 12,
+      "prefix": 60736,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "control"
+        }
+      ]
+    },
+    {
+      "name": "POPCTR",
+      "min": 15552512,
+      "max": 15554560,
+      "opcodeBits": 12,
+      "prefix": 60752,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "control"
+        }
+      ]
+    },
+    {
+      "name": "SETCONTCTR",
+      "min": 15556608,
+      "max": 15558656,
+      "opcodeBits": 12,
+      "prefix": 60768,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "control"
+        }
+      ]
+    },
+    {
+      "name": "SETRETCTR",
+      "min": 15560704,
+      "max": 15562752,
+      "opcodeBits": 12,
+      "prefix": 60784,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "control"
+        }
+      ]
+    },
+    {
+      "name": "SETALTCTR",
+      "min": 15564800,
+      "max": 15566848,
+      "opcodeBits": 12,
+      "prefix": 60800,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "control"
+        }
+      ]
+    },
+    {
+      "name": "POPSAVE",
+      "min": 15568896,
+      "max": 15570944,
+      "opcodeBits": 12,
+      "prefix": 60816,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "control"
+        }
+      ]
+    },
+    {
+      "name": "SAVECTR",
+      "min": 15572992,
+      "max": 15575040,
+      "opcodeBits": 12,
+      "prefix": 60832,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "control"
+        }
+      ]
+    },
+    {
+      "name": "SAVEALTCTR",
+      "min": 15577088,
+      "max": 15579136,
+      "opcodeBits": 12,
+      "prefix": 60848,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "control"
+        }
+      ]
+    },
+    {
+      "name": "SAVEBOTHCTR",
+      "min": 15581184,
+      "max": 15583232,
+      "opcodeBits": 12,
+      "prefix": 60864,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "control"
+        }
+      ]
+    },
+    {
+      "name": "PUSHCTRX",
+      "min": 15589376,
+      "max": 15589632,
+      "opcodeBits": 16,
+      "prefix": 60896,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "POPCTRX",
+      "min": 15589632,
+      "max": 15589888,
+      "opcodeBits": 16,
+      "prefix": 60897,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETCONTCTRX",
+      "min": 15589888,
+      "max": 15590144,
+      "opcodeBits": 16,
+      "prefix": 60898,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETCONTCTRMANY",
+      "min": 15590144,
+      "max": 15590400,
+      "opcodeBits": 16,
+      "prefix": 60899,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "delta",
+          "delta": 1,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    },
+    {
+      "name": "SETCONTCTRMANYX",
+      "min": 15590400,
+      "max": 15590656,
+      "opcodeBits": 16,
+      "prefix": 60900,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BOOLAND",
+      "min": 15593472,
+      "max": 15593728,
+      "opcodeBits": 16,
+      "prefix": 60912,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BOOLOR",
+      "min": 15593728,
+      "max": 15593984,
+      "opcodeBits": 16,
+      "prefix": 60913,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "COMPOSBOTH",
+      "min": 15593984,
+      "max": 15594240,
+      "opcodeBits": 16,
+      "prefix": 60914,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ATEXIT",
+      "min": 15594240,
+      "max": 15594496,
+      "opcodeBits": 16,
+      "prefix": 60915,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ATEXITALT",
+      "min": 15594496,
+      "max": 15594752,
+      "opcodeBits": 16,
+      "prefix": 60916,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETEXITALT",
+      "min": 15594752,
+      "max": 15595008,
+      "opcodeBits": 16,
+      "prefix": 60917,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "THENRET",
+      "min": 15595008,
+      "max": 15595264,
+      "opcodeBits": 16,
+      "prefix": 60918,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "THENRETALT",
+      "min": 15595264,
+      "max": 15595520,
+      "opcodeBits": 16,
+      "prefix": 60919,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INVERT",
+      "min": 15595520,
+      "max": 15595776,
+      "opcodeBits": 16,
+      "prefix": 60920,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BOOLEVAL",
+      "min": 15595776,
+      "max": 15596032,
+      "opcodeBits": 16,
+      "prefix": 60921,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SAMEALT",
+      "min": 15596032,
+      "max": 15596288,
+      "opcodeBits": 16,
+      "prefix": 60922,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SAMEALTSAVE",
+      "min": 15596288,
+      "max": 15596544,
+      "opcodeBits": 16,
+      "prefix": 60923,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLESSARGS",
+      "min": 15597568,
+      "max": 15663104,
+      "opcodeBits": 8,
+      "prefix": 238,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        },
+        {
+          "type": "delta",
+          "delta": -1,
+          "arg": {
+            "type": "uint",
+            "len": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "CALLDICT",
+      "min": 15728640,
+      "max": 15794176,
+      "opcodeBits": 8,
+      "prefix": 240,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "CALLDICT_LONG",
+      "min": 15794176,
+      "max": 15810560,
+      "opcodeBits": 10,
+      "prefix": 964,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 14
+        }
+      ]
+    },
+    {
+      "name": "JMPDICT",
+      "min": 15810560,
+      "max": 15826944,
+      "opcodeBits": 10,
+      "prefix": 965,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 14
+        }
+      ]
+    },
+    {
+      "name": "PREPAREDICT",
+      "min": 15826944,
+      "max": 15843328,
+      "opcodeBits": 10,
+      "prefix": 966,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 14
+        }
+      ]
+    },
+    {
+      "name": "THROW_SHORT",
+      "min": 15859712,
+      "max": 15876096,
+      "opcodeBits": 10,
+      "prefix": 968,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 6
+        }
+      ]
+    },
+    {
+      "name": "THROWIF_SHORT",
+      "min": 15876096,
+      "max": 15892480,
+      "opcodeBits": 10,
+      "prefix": 969,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 6
+        }
+      ]
+    },
+    {
+      "name": "THROWIFNOT_SHORT",
+      "min": 15892480,
+      "max": 15908864,
+      "opcodeBits": 10,
+      "prefix": 970,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 6
+        }
+      ]
+    },
+    {
+      "name": "THROW",
+      "min": 15908864,
+      "max": 15910912,
+      "opcodeBits": 13,
+      "prefix": 7768,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 11
+        }
+      ]
+    },
+    {
+      "name": "THROWARG",
+      "min": 15910912,
+      "max": 15912960,
+      "opcodeBits": 13,
+      "prefix": 7769,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 11
+        }
+      ]
+    },
+    {
+      "name": "THROWIF",
+      "min": 15912960,
+      "max": 15915008,
+      "opcodeBits": 13,
+      "prefix": 7770,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 11
+        }
+      ]
+    },
+    {
+      "name": "THROWARGIF",
+      "min": 15915008,
+      "max": 15917056,
+      "opcodeBits": 13,
+      "prefix": 7771,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 11
+        }
+      ]
+    },
+    {
+      "name": "THROWIFNOT",
+      "min": 15917056,
+      "max": 15919104,
+      "opcodeBits": 13,
+      "prefix": 7772,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 11
+        }
+      ]
+    },
+    {
+      "name": "THROWARGIFNOT",
+      "min": 15919104,
+      "max": 15921152,
+      "opcodeBits": 13,
+      "prefix": 7773,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 11
+        }
+      ]
+    },
+    {
+      "name": "THROWANY",
+      "min": 15921152,
+      "max": 15921408,
+      "opcodeBits": 16,
+      "prefix": 62192,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "THROWARGANY",
+      "min": 15921408,
+      "max": 15921664,
+      "opcodeBits": 16,
+      "prefix": 62193,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "THROWANYIF",
+      "min": 15921664,
+      "max": 15921920,
+      "opcodeBits": 16,
+      "prefix": 62194,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "THROWARGANYIF",
+      "min": 15921920,
+      "max": 15922176,
+      "opcodeBits": 16,
+      "prefix": 62195,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "THROWANYIFNOT",
+      "min": 15922176,
+      "max": 15922432,
+      "opcodeBits": 16,
+      "prefix": 62196,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "THROWARGANYIFNOT",
+      "min": 15922432,
+      "max": 15922688,
+      "opcodeBits": 16,
+      "prefix": 62197,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "TRY",
+      "min": 15924992,
+      "max": 15925248,
+      "opcodeBits": 16,
+      "prefix": 62207,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "TRYARGS",
+      "min": 15925248,
+      "max": 15990784,
+      "opcodeBits": 8,
+      "prefix": 243,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        },
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "STDICT",
+      "min": 15990784,
+      "max": 15991040,
+      "opcodeBits": 16,
+      "prefix": 62464,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SKIPDICT",
+      "min": 15991040,
+      "max": 15991296,
+      "opcodeBits": 16,
+      "prefix": 62465,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDDICTS",
+      "min": 15991296,
+      "max": 15991552,
+      "opcodeBits": 16,
+      "prefix": 62466,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDDICTS",
+      "min": 15991552,
+      "max": 15991808,
+      "opcodeBits": 16,
+      "prefix": 62467,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDDICT",
+      "min": 15991808,
+      "max": 15992064,
+      "opcodeBits": 16,
+      "prefix": 62468,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDDICT",
+      "min": 15992064,
+      "max": 15992320,
+      "opcodeBits": 16,
+      "prefix": 62469,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDDICTQ",
+      "min": 15992320,
+      "max": 15992576,
+      "opcodeBits": 16,
+      "prefix": 62470,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PLDDICTQ",
+      "min": 15992576,
+      "max": 15992832,
+      "opcodeBits": 16,
+      "prefix": 62471,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTGET",
+      "min": 15993344,
+      "max": 15993600,
+      "opcodeBits": 16,
+      "prefix": 62474,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTGETREF",
+      "min": 15993600,
+      "max": 15993856,
+      "opcodeBits": 16,
+      "prefix": 62475,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIGET",
+      "min": 15993856,
+      "max": 15994112,
+      "opcodeBits": 16,
+      "prefix": 62476,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIGETREF",
+      "min": 15994112,
+      "max": 15994368,
+      "opcodeBits": 16,
+      "prefix": 62477,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUGET",
+      "min": 15994368,
+      "max": 15994624,
+      "opcodeBits": 16,
+      "prefix": 62478,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUGETREF",
+      "min": 15994624,
+      "max": 15994880,
+      "opcodeBits": 16,
+      "prefix": 62479,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTSET",
+      "min": 15995392,
+      "max": 15995648,
+      "opcodeBits": 16,
+      "prefix": 62482,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTSETREF",
+      "min": 15995648,
+      "max": 15995904,
+      "opcodeBits": 16,
+      "prefix": 62483,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTISET",
+      "min": 15995904,
+      "max": 15996160,
+      "opcodeBits": 16,
+      "prefix": 62484,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTISETREF",
+      "min": 15996160,
+      "max": 15996416,
+      "opcodeBits": 16,
+      "prefix": 62485,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUSET",
+      "min": 15996416,
+      "max": 15996672,
+      "opcodeBits": 16,
+      "prefix": 62486,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUSETREF",
+      "min": 15996672,
+      "max": 15996928,
+      "opcodeBits": 16,
+      "prefix": 62487,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTSETGET",
+      "min": 15997440,
+      "max": 15997696,
+      "opcodeBits": 16,
+      "prefix": 62490,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTSETGETREF",
+      "min": 15997696,
+      "max": 15997952,
+      "opcodeBits": 16,
+      "prefix": 62491,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTISETGET",
+      "min": 15997952,
+      "max": 15998208,
+      "opcodeBits": 16,
+      "prefix": 62492,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTISETGETREF",
+      "min": 15998208,
+      "max": 15998464,
+      "opcodeBits": 16,
+      "prefix": 62493,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUSETGET",
+      "min": 15998464,
+      "max": 15998720,
+      "opcodeBits": 16,
+      "prefix": 62494,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUSETGETREF",
+      "min": 15998720,
+      "max": 15998976,
+      "opcodeBits": 16,
+      "prefix": 62495,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTREPLACE",
+      "min": 15999488,
+      "max": 15999744,
+      "opcodeBits": 16,
+      "prefix": 62498,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTREPLACEREF",
+      "min": 15999744,
+      "max": 16000000,
+      "opcodeBits": 16,
+      "prefix": 62499,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIREPLACE",
+      "min": 16000000,
+      "max": 16000256,
+      "opcodeBits": 16,
+      "prefix": 62500,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIREPLACEREF",
+      "min": 16000256,
+      "max": 16000512,
+      "opcodeBits": 16,
+      "prefix": 62501,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUREPLACE",
+      "min": 16000512,
+      "max": 16000768,
+      "opcodeBits": 16,
+      "prefix": 62502,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUREPLACEREF",
+      "min": 16000768,
+      "max": 16001024,
+      "opcodeBits": 16,
+      "prefix": 62503,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTREPLACEGET",
+      "min": 16001536,
+      "max": 16001792,
+      "opcodeBits": 16,
+      "prefix": 62506,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTREPLACEGETREF",
+      "min": 16001792,
+      "max": 16002048,
+      "opcodeBits": 16,
+      "prefix": 62507,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIREPLACEGET",
+      "min": 16002048,
+      "max": 16002304,
+      "opcodeBits": 16,
+      "prefix": 62508,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIREPLACEGETREF",
+      "min": 16002304,
+      "max": 16002560,
+      "opcodeBits": 16,
+      "prefix": 62509,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUREPLACEGET",
+      "min": 16002560,
+      "max": 16002816,
+      "opcodeBits": 16,
+      "prefix": 62510,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUREPLACEGETREF",
+      "min": 16002816,
+      "max": 16003072,
+      "opcodeBits": 16,
+      "prefix": 62511,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTADD",
+      "min": 16003584,
+      "max": 16003840,
+      "opcodeBits": 16,
+      "prefix": 62514,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTADDREF",
+      "min": 16003840,
+      "max": 16004096,
+      "opcodeBits": 16,
+      "prefix": 62515,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIADD",
+      "min": 16004096,
+      "max": 16004352,
+      "opcodeBits": 16,
+      "prefix": 62516,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIADDREF",
+      "min": 16004352,
+      "max": 16004608,
+      "opcodeBits": 16,
+      "prefix": 62517,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUADD",
+      "min": 16004608,
+      "max": 16004864,
+      "opcodeBits": 16,
+      "prefix": 62518,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUADDREF",
+      "min": 16004864,
+      "max": 16005120,
+      "opcodeBits": 16,
+      "prefix": 62519,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTADDGET",
+      "min": 16005632,
+      "max": 16005888,
+      "opcodeBits": 16,
+      "prefix": 62522,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTADDGETREF",
+      "min": 16005888,
+      "max": 16006144,
+      "opcodeBits": 16,
+      "prefix": 62523,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIADDGET",
+      "min": 16006144,
+      "max": 16006400,
+      "opcodeBits": 16,
+      "prefix": 62524,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIADDGETREF",
+      "min": 16006400,
+      "max": 16006656,
+      "opcodeBits": 16,
+      "prefix": 62525,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUADDGET",
+      "min": 16006656,
+      "max": 16006912,
+      "opcodeBits": 16,
+      "prefix": 62526,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUADDGETREF",
+      "min": 16006912,
+      "max": 16007168,
+      "opcodeBits": 16,
+      "prefix": 62527,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTSETB",
+      "min": 16007424,
+      "max": 16007680,
+      "opcodeBits": 16,
+      "prefix": 62529,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTISETB",
+      "min": 16007680,
+      "max": 16007936,
+      "opcodeBits": 16,
+      "prefix": 62530,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUSETB",
+      "min": 16007936,
+      "max": 16008192,
+      "opcodeBits": 16,
+      "prefix": 62531,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTSETGETB",
+      "min": 16008448,
+      "max": 16008704,
+      "opcodeBits": 16,
+      "prefix": 62533,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTISETGETB",
+      "min": 16008704,
+      "max": 16008960,
+      "opcodeBits": 16,
+      "prefix": 62534,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUSETGETB",
+      "min": 16008960,
+      "max": 16009216,
+      "opcodeBits": 16,
+      "prefix": 62535,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTREPLACEB",
+      "min": 16009472,
+      "max": 16009728,
+      "opcodeBits": 16,
+      "prefix": 62537,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIREPLACEB",
+      "min": 16009728,
+      "max": 16009984,
+      "opcodeBits": 16,
+      "prefix": 62538,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUREPLACEB",
+      "min": 16009984,
+      "max": 16010240,
+      "opcodeBits": 16,
+      "prefix": 62539,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTREPLACEGETB",
+      "min": 16010496,
+      "max": 16010752,
+      "opcodeBits": 16,
+      "prefix": 62541,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIREPLACEGETB",
+      "min": 16010752,
+      "max": 16011008,
+      "opcodeBits": 16,
+      "prefix": 62542,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUREPLACEGETB",
+      "min": 16011008,
+      "max": 16011264,
+      "opcodeBits": 16,
+      "prefix": 62543,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTADDB",
+      "min": 16011520,
+      "max": 16011776,
+      "opcodeBits": 16,
+      "prefix": 62545,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIADDB",
+      "min": 16011776,
+      "max": 16012032,
+      "opcodeBits": 16,
+      "prefix": 62546,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUADDB",
+      "min": 16012032,
+      "max": 16012288,
+      "opcodeBits": 16,
+      "prefix": 62547,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTADDGETB",
+      "min": 16012544,
+      "max": 16012800,
+      "opcodeBits": 16,
+      "prefix": 62549,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIADDGETB",
+      "min": 16012800,
+      "max": 16013056,
+      "opcodeBits": 16,
+      "prefix": 62550,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUADDGETB",
+      "min": 16013056,
+      "max": 16013312,
+      "opcodeBits": 16,
+      "prefix": 62551,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTDEL",
+      "min": 16013568,
+      "max": 16013824,
+      "opcodeBits": 16,
+      "prefix": 62553,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIDEL",
+      "min": 16013824,
+      "max": 16014080,
+      "opcodeBits": 16,
+      "prefix": 62554,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUDEL",
+      "min": 16014080,
+      "max": 16014336,
+      "opcodeBits": 16,
+      "prefix": 62555,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTDELGET",
+      "min": 16015872,
+      "max": 16016128,
+      "opcodeBits": 16,
+      "prefix": 62562,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTDELGETREF",
+      "min": 16016128,
+      "max": 16016384,
+      "opcodeBits": 16,
+      "prefix": 62563,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIDELGET",
+      "min": 16016384,
+      "max": 16016640,
+      "opcodeBits": 16,
+      "prefix": 62564,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIDELGETREF",
+      "min": 16016640,
+      "max": 16016896,
+      "opcodeBits": 16,
+      "prefix": 62565,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUDELGET",
+      "min": 16016896,
+      "max": 16017152,
+      "opcodeBits": 16,
+      "prefix": 62566,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUDELGETREF",
+      "min": 16017152,
+      "max": 16017408,
+      "opcodeBits": 16,
+      "prefix": 62567,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTGETOPTREF",
+      "min": 16017664,
+      "max": 16017920,
+      "opcodeBits": 16,
+      "prefix": 62569,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIGETOPTREF",
+      "min": 16017920,
+      "max": 16018176,
+      "opcodeBits": 16,
+      "prefix": 62570,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUGETOPTREF",
+      "min": 16018176,
+      "max": 16018432,
+      "opcodeBits": 16,
+      "prefix": 62571,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTSETGETOPTREF",
+      "min": 16018688,
+      "max": 16018944,
+      "opcodeBits": 16,
+      "prefix": 62573,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTISETGETOPTREF",
+      "min": 16018944,
+      "max": 16019200,
+      "opcodeBits": 16,
+      "prefix": 62574,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUSETGETOPTREF",
+      "min": 16019200,
+      "max": 16019456,
+      "opcodeBits": 16,
+      "prefix": 62575,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PFXDICTSET",
+      "min": 16019456,
+      "max": 16019712,
+      "opcodeBits": 16,
+      "prefix": 62576,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PFXDICTREPLACE",
+      "min": 16019712,
+      "max": 16019968,
+      "opcodeBits": 16,
+      "prefix": 62577,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PFXDICTADD",
+      "min": 16019968,
+      "max": 16020224,
+      "opcodeBits": 16,
+      "prefix": 62578,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PFXDICTDEL",
+      "min": 16020224,
+      "max": 16020480,
+      "opcodeBits": 16,
+      "prefix": 62579,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTGETNEXT",
+      "min": 16020480,
+      "max": 16020736,
+      "opcodeBits": 16,
+      "prefix": 62580,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTGETNEXTEQ",
+      "min": 16020736,
+      "max": 16020992,
+      "opcodeBits": 16,
+      "prefix": 62581,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTGETPREV",
+      "min": 16020992,
+      "max": 16021248,
+      "opcodeBits": 16,
+      "prefix": 62582,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTGETPREVEQ",
+      "min": 16021248,
+      "max": 16021504,
+      "opcodeBits": 16,
+      "prefix": 62583,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIGETNEXT",
+      "min": 16021504,
+      "max": 16021760,
+      "opcodeBits": 16,
+      "prefix": 62584,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIGETNEXTEQ",
+      "min": 16021760,
+      "max": 16022016,
+      "opcodeBits": 16,
+      "prefix": 62585,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIGETPREV",
+      "min": 16022016,
+      "max": 16022272,
+      "opcodeBits": 16,
+      "prefix": 62586,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIGETPREVEQ",
+      "min": 16022272,
+      "max": 16022528,
+      "opcodeBits": 16,
+      "prefix": 62587,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUGETNEXT",
+      "min": 16022528,
+      "max": 16022784,
+      "opcodeBits": 16,
+      "prefix": 62588,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUGETNEXTEQ",
+      "min": 16022784,
+      "max": 16023040,
+      "opcodeBits": 16,
+      "prefix": 62589,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUGETPREV",
+      "min": 16023040,
+      "max": 16023296,
+      "opcodeBits": 16,
+      "prefix": 62590,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUGETPREVEQ",
+      "min": 16023296,
+      "max": 16023552,
+      "opcodeBits": 16,
+      "prefix": 62591,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTMIN",
+      "min": 16024064,
+      "max": 16024320,
+      "opcodeBits": 16,
+      "prefix": 62594,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTMINREF",
+      "min": 16024320,
+      "max": 16024576,
+      "opcodeBits": 16,
+      "prefix": 62595,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIMIN",
+      "min": 16024576,
+      "max": 16024832,
+      "opcodeBits": 16,
+      "prefix": 62596,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIMINREF",
+      "min": 16024832,
+      "max": 16025088,
+      "opcodeBits": 16,
+      "prefix": 62597,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUMIN",
+      "min": 16025088,
+      "max": 16025344,
+      "opcodeBits": 16,
+      "prefix": 62598,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUMINREF",
+      "min": 16025344,
+      "max": 16025600,
+      "opcodeBits": 16,
+      "prefix": 62599,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTMAX",
+      "min": 16026112,
+      "max": 16026368,
+      "opcodeBits": 16,
+      "prefix": 62602,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTMAXREF",
+      "min": 16026368,
+      "max": 16026624,
+      "opcodeBits": 16,
+      "prefix": 62603,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIMAX",
+      "min": 16026624,
+      "max": 16026880,
+      "opcodeBits": 16,
+      "prefix": 62604,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIMAXREF",
+      "min": 16026880,
+      "max": 16027136,
+      "opcodeBits": 16,
+      "prefix": 62605,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUMAX",
+      "min": 16027136,
+      "max": 16027392,
+      "opcodeBits": 16,
+      "prefix": 62606,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUMAXREF",
+      "min": 16027392,
+      "max": 16027648,
+      "opcodeBits": 16,
+      "prefix": 62607,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTREMMIN",
+      "min": 16028160,
+      "max": 16028416,
+      "opcodeBits": 16,
+      "prefix": 62610,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTREMMINREF",
+      "min": 16028416,
+      "max": 16028672,
+      "opcodeBits": 16,
+      "prefix": 62611,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIREMMIN",
+      "min": 16028672,
+      "max": 16028928,
+      "opcodeBits": 16,
+      "prefix": 62612,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIREMMINREF",
+      "min": 16028928,
+      "max": 16029184,
+      "opcodeBits": 16,
+      "prefix": 62613,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUREMMIN",
+      "min": 16029184,
+      "max": 16029440,
+      "opcodeBits": 16,
+      "prefix": 62614,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUREMMINREF",
+      "min": 16029440,
+      "max": 16029696,
+      "opcodeBits": 16,
+      "prefix": 62615,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTREMMAX",
+      "min": 16030208,
+      "max": 16030464,
+      "opcodeBits": 16,
+      "prefix": 62618,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTREMMAXREF",
+      "min": 16030464,
+      "max": 16030720,
+      "opcodeBits": 16,
+      "prefix": 62619,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIREMMAX",
+      "min": 16030720,
+      "max": 16030976,
+      "opcodeBits": 16,
+      "prefix": 62620,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIREMMAXREF",
+      "min": 16030976,
+      "max": 16031232,
+      "opcodeBits": 16,
+      "prefix": 62621,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUREMMAX",
+      "min": 16031232,
+      "max": 16031488,
+      "opcodeBits": 16,
+      "prefix": 62622,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUREMMAXREF",
+      "min": 16031488,
+      "max": 16031744,
+      "opcodeBits": 16,
+      "prefix": 62623,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIGETJMP",
+      "min": 16031744,
+      "max": 16032000,
+      "opcodeBits": 16,
+      "prefix": 62624,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUGETJMP",
+      "min": 16032000,
+      "max": 16032256,
+      "opcodeBits": 16,
+      "prefix": 62625,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIGETEXEC",
+      "min": 16032256,
+      "max": 16032512,
+      "opcodeBits": 16,
+      "prefix": 62626,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUGETEXEC",
+      "min": 16032512,
+      "max": 16032768,
+      "opcodeBits": 16,
+      "prefix": 62627,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTPUSHCONST",
+      "min": 16032768,
+      "max": 16033792,
+      "opcodeBits": 14,
+      "prefix": 15657,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "dict"
+        },
+        {
+          "type": "uint",
+          "len": 10
+        }
+      ]
+    },
+    {
+      "name": "PFXDICTGETQ",
+      "min": 16033792,
+      "max": 16034048,
+      "opcodeBits": 16,
+      "prefix": 62632,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PFXDICTGET",
+      "min": 16034048,
+      "max": 16034304,
+      "opcodeBits": 16,
+      "prefix": 62633,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PFXDICTGETJMP",
+      "min": 16034304,
+      "max": 16034560,
+      "opcodeBits": 16,
+      "prefix": 62634,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PFXDICTGETEXEC",
+      "min": 16034560,
+      "max": 16034816,
+      "opcodeBits": 16,
+      "prefix": 62635,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PFXDICTSWITCH",
+      "min": 16034816,
+      "max": 16035840,
+      "opcodeBits": 14,
+      "prefix": 15659,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "dict"
+        },
+        {
+          "type": "uint",
+          "len": 10
+        }
+      ]
+    },
+    {
+      "name": "SUBDICTGET",
+      "min": 16036096,
+      "max": 16036352,
+      "opcodeBits": 16,
+      "prefix": 62641,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SUBDICTIGET",
+      "min": 16036352,
+      "max": 16036608,
+      "opcodeBits": 16,
+      "prefix": 62642,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SUBDICTUGET",
+      "min": 16036608,
+      "max": 16036864,
+      "opcodeBits": 16,
+      "prefix": 62643,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SUBDICTRPGET",
+      "min": 16037120,
+      "max": 16037376,
+      "opcodeBits": 16,
+      "prefix": 62645,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SUBDICTIRPGET",
+      "min": 16037376,
+      "max": 16037632,
+      "opcodeBits": 16,
+      "prefix": 62646,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SUBDICTURPGET",
+      "min": 16037632,
+      "max": 16037888,
+      "opcodeBits": 16,
+      "prefix": 62647,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIGETJMPZ",
+      "min": 16038912,
+      "max": 16039168,
+      "opcodeBits": 16,
+      "prefix": 62652,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUGETJMPZ",
+      "min": 16039168,
+      "max": 16039424,
+      "opcodeBits": 16,
+      "prefix": 62653,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTIGETEXECZ",
+      "min": 16039424,
+      "max": 16039680,
+      "opcodeBits": 16,
+      "prefix": 62654,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DICTUGETEXECZ",
+      "min": 16039680,
+      "max": 16039936,
+      "opcodeBits": 16,
+      "prefix": 62655,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ACCEPT",
+      "min": 16252928,
+      "max": 16253184,
+      "opcodeBits": 16,
+      "prefix": 63488,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETGASLIMIT",
+      "min": 16253184,
+      "max": 16253440,
+      "opcodeBits": 16,
+      "prefix": 63489,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GASCONSUMED",
+      "min": 16254720,
+      "max": 16254976,
+      "opcodeBits": 16,
+      "prefix": 63495,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "COMMIT",
+      "min": 16256768,
+      "max": 16257024,
+      "opcodeBits": 16,
+      "prefix": 63503,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RANDU256",
+      "min": 16257024,
+      "max": 16257280,
+      "opcodeBits": 16,
+      "prefix": 63504,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RAND",
+      "min": 16257280,
+      "max": 16257536,
+      "opcodeBits": 16,
+      "prefix": 63505,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETRAND",
+      "min": 16258048,
+      "max": 16258304,
+      "opcodeBits": 16,
+      "prefix": 63508,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ADDRAND",
+      "min": 16258304,
+      "max": 16258560,
+      "opcodeBits": 16,
+      "prefix": 63509,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GETPARAM",
+      "min": 16261120,
+      "max": 16261888,
+      "opcodeBits": 12,
+      "prefix": 63520,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "NOW",
+      "min": 16261888,
+      "max": 16262144,
+      "opcodeBits": 16,
+      "prefix": 63523,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLOCKLT",
+      "min": 16262144,
+      "max": 16262400,
+      "opcodeBits": 16,
+      "prefix": 63524,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LTIME",
+      "min": 16262400,
+      "max": 16262656,
+      "opcodeBits": 16,
+      "prefix": 63525,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RANDSEED",
+      "min": 16262656,
+      "max": 16262912,
+      "opcodeBits": 16,
+      "prefix": 63526,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BALANCE",
+      "min": 16262912,
+      "max": 16263168,
+      "opcodeBits": 16,
+      "prefix": 63527,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MYADDR",
+      "min": 16263168,
+      "max": 16263424,
+      "opcodeBits": 16,
+      "prefix": 63528,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CONFIGROOT",
+      "min": 16263424,
+      "max": 16263680,
+      "opcodeBits": 16,
+      "prefix": 63529,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "MYCODE",
+      "min": 16263680,
+      "max": 16263936,
+      "opcodeBits": 16,
+      "prefix": 63530,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INCOMINGVALUE",
+      "min": 16263936,
+      "max": 16264192,
+      "opcodeBits": 16,
+      "prefix": 63531,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STORAGEFEES",
+      "min": 16264192,
+      "max": 16264448,
+      "opcodeBits": 16,
+      "prefix": 63532,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PREVBLOCKSINFOTUPLE",
+      "min": 16264448,
+      "max": 16264704,
+      "opcodeBits": 16,
+      "prefix": 63533,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "UNPACKEDCONFIGTUPLE",
+      "min": 16264704,
+      "max": 16264960,
+      "opcodeBits": 16,
+      "prefix": 63534,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DUEPAYMENT",
+      "min": 16264960,
+      "max": 16265216,
+      "opcodeBits": 16,
+      "prefix": 63535,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CONFIGDICT",
+      "min": 16265216,
+      "max": 16265472,
+      "opcodeBits": 16,
+      "prefix": 63536,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CONFIGPARAM",
+      "min": 16265728,
+      "max": 16265984,
+      "opcodeBits": 16,
+      "prefix": 63538,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CONFIGOPTPARAM",
+      "min": 16265984,
+      "max": 16266240,
+      "opcodeBits": 16,
+      "prefix": 63539,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PREVMCBLOCKS",
+      "min": 16266240,
+      "max": 16266241,
+      "opcodeBits": 24,
+      "prefix": 16266240,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PREVKEYBLOCK",
+      "min": 16266241,
+      "max": 16266242,
+      "opcodeBits": 24,
+      "prefix": 16266241,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PREVMCBLOCKS_100",
+      "min": 16266242,
+      "max": 16266243,
+      "opcodeBits": 24,
+      "prefix": 16266242,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GLOBALID",
+      "min": 16266496,
+      "max": 16266752,
+      "opcodeBits": 16,
+      "prefix": 63541,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GETGASFEE",
+      "min": 16266752,
+      "max": 16267008,
+      "opcodeBits": 16,
+      "prefix": 63542,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GETSTORAGEFEE",
+      "min": 16267008,
+      "max": 16267264,
+      "opcodeBits": 16,
+      "prefix": 63543,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GETFORWARDFEE",
+      "min": 16267264,
+      "max": 16267520,
+      "opcodeBits": 16,
+      "prefix": 63544,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GETPRECOMPILEDGAS",
+      "min": 16267520,
+      "max": 16267776,
+      "opcodeBits": 16,
+      "prefix": 63545,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GETORIGINALFWDFEE",
+      "min": 16267776,
+      "max": 16268032,
+      "opcodeBits": 16,
+      "prefix": 63546,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GETGASFEESIMPLE",
+      "min": 16268032,
+      "max": 16268288,
+      "opcodeBits": 16,
+      "prefix": 63547,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GETFORWARDFEESIMPLE",
+      "min": 16268288,
+      "max": 16268544,
+      "opcodeBits": 16,
+      "prefix": 63548,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GETGLOBVAR",
+      "min": 16269312,
+      "max": 16269568,
+      "opcodeBits": 16,
+      "prefix": 63552,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GETGLOB",
+      "min": 16269568,
+      "max": 16277504,
+      "opcodeBits": 11,
+      "prefix": 63553,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "uint",
+          "len": 5
+        }
+      ]
+    },
+    {
+      "name": "SETGLOBVAR",
+      "min": 16277504,
+      "max": 16277760,
+      "opcodeBits": 16,
+      "prefix": 63584,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETGLOB",
+      "min": 16277760,
+      "max": 16285696,
+      "opcodeBits": 11,
+      "prefix": 63585,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "uint",
+          "len": 5
+        }
+      ]
+    },
+    {
+      "name": "GETEXTRABALANCE",
+      "min": 16285696,
+      "max": 16285952,
+      "opcodeBits": 16,
+      "prefix": 63616,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GETPARAMLONG",
+      "min": 16285952,
+      "max": 16285969,
+      "opcodeBits": 16,
+      "prefix": 16285952,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "uint",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "INMSGPARAMS",
+      "min": 16285969,
+      "max": 16285970,
+      "opcodeBits": 24,
+      "prefix": 16285969,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "GETPARAMLONG2",
+      "min": 16285970,
+      "max": 16286207,
+      "opcodeBits": 16,
+      "prefix": 16285970,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "uint",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "INMSG_BOUNCE",
+      "min": 16289792,
+      "max": 16290048,
+      "opcodeBits": 16,
+      "prefix": 63632,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INMSG_BOUNCED",
+      "min": 16290048,
+      "max": 16290304,
+      "opcodeBits": 16,
+      "prefix": 63633,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INMSG_SRC",
+      "min": 16290304,
+      "max": 16290560,
+      "opcodeBits": 16,
+      "prefix": 63634,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INMSG_FWDFEE",
+      "min": 16290560,
+      "max": 16290816,
+      "opcodeBits": 16,
+      "prefix": 63635,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INMSG_LT",
+      "min": 16290816,
+      "max": 16291072,
+      "opcodeBits": 16,
+      "prefix": 63636,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INMSG_UTIME",
+      "min": 16291072,
+      "max": 16291328,
+      "opcodeBits": 16,
+      "prefix": 63637,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INMSG_ORIGVALUE",
+      "min": 16291328,
+      "max": 16291584,
+      "opcodeBits": 16,
+      "prefix": 63638,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INMSG_VALUE",
+      "min": 16291584,
+      "max": 16291840,
+      "opcodeBits": 16,
+      "prefix": 63639,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INMSG_VALUEEXTRA",
+      "min": 16291840,
+      "max": 16292096,
+      "opcodeBits": 16,
+      "prefix": 63640,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INMSG_STATEINIT",
+      "min": 16292096,
+      "max": 16292352,
+      "opcodeBits": 16,
+      "prefix": 63641,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "INMSGPARAM",
+      "min": 16292352,
+      "max": 16293888,
+      "opcodeBits": 12,
+      "prefix": 63642,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "uint",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "HASHCU",
+      "min": 16318464,
+      "max": 16318720,
+      "opcodeBits": 16,
+      "prefix": 63744,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "HASHSU",
+      "min": 16318720,
+      "max": 16318976,
+      "opcodeBits": 16,
+      "prefix": 63745,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SHA256U",
+      "min": 16318976,
+      "max": 16319232,
+      "opcodeBits": 16,
+      "prefix": 63746,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "HASHEXT",
+      "min": 16319488,
+      "max": 16319744,
+      "opcodeBits": 16,
+      "prefix": 63748,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "HASHEXTR",
+      "min": 16319744,
+      "max": 16320000,
+      "opcodeBits": 16,
+      "prefix": 63749,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "HASHEXTA",
+      "min": 16320000,
+      "max": 16320256,
+      "opcodeBits": 16,
+      "prefix": 63750,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "HASHEXTAR",
+      "min": 16320256,
+      "max": 16320512,
+      "opcodeBits": 16,
+      "prefix": 63751,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "CHKSIGNU",
+      "min": 16322560,
+      "max": 16322816,
+      "opcodeBits": 16,
+      "prefix": 63760,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CHKSIGNS",
+      "min": 16322816,
+      "max": 16323072,
+      "opcodeBits": 16,
+      "prefix": 63761,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "ECRECOVER",
+      "min": 16323072,
+      "max": 16323328,
+      "opcodeBits": 16,
+      "prefix": 63762,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SECP256K1_XONLY_PUBKEY_TWEAK_ADD",
+      "min": 16323328,
+      "max": 16323584,
+      "opcodeBits": 16,
+      "prefix": 63763,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "P256_CHKSIGNU",
+      "min": 16323584,
+      "max": 16323840,
+      "opcodeBits": 16,
+      "prefix": 63764,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "P256_CHKSIGNS",
+      "min": 16323840,
+      "max": 16324096,
+      "opcodeBits": 16,
+      "prefix": 63765,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "HASHBU",
+      "min": 16324096,
+      "max": 16324352,
+      "opcodeBits": 16,
+      "prefix": 63766,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RIST255_FROMHASH",
+      "min": 16326656,
+      "max": 16326912,
+      "opcodeBits": 16,
+      "prefix": 63776,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RIST255_VALIDATE",
+      "min": 16326912,
+      "max": 16327168,
+      "opcodeBits": 16,
+      "prefix": 63777,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RIST255_ADD",
+      "min": 16327168,
+      "max": 16327424,
+      "opcodeBits": 16,
+      "prefix": 63778,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RIST255_SUB",
+      "min": 16327424,
+      "max": 16327680,
+      "opcodeBits": 16,
+      "prefix": 63779,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RIST255_MUL",
+      "min": 16327680,
+      "max": 16327936,
+      "opcodeBits": 16,
+      "prefix": 63780,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RIST255_MULBASE",
+      "min": 16327936,
+      "max": 16328192,
+      "opcodeBits": 16,
+      "prefix": 63781,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RIST255_PUSHL",
+      "min": 16328192,
+      "max": 16328448,
+      "opcodeBits": 16,
+      "prefix": 63782,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_VERIFY",
+      "min": 16330752,
+      "max": 16330753,
+      "opcodeBits": 24,
+      "prefix": 16330752,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_AGGREGATE",
+      "min": 16330753,
+      "max": 16330754,
+      "opcodeBits": 24,
+      "prefix": 16330753,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_FASTAGGREGATEVERIFY",
+      "min": 16330754,
+      "max": 16330755,
+      "opcodeBits": 24,
+      "prefix": 16330754,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_AGGREGATEVERIFY",
+      "min": 16330755,
+      "max": 16330756,
+      "opcodeBits": 24,
+      "prefix": 16330755,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G1_ADD",
+      "min": 16330768,
+      "max": 16330769,
+      "opcodeBits": 24,
+      "prefix": 16330768,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G1_SUB",
+      "min": 16330769,
+      "max": 16330770,
+      "opcodeBits": 24,
+      "prefix": 16330769,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G1_NEG",
+      "min": 16330770,
+      "max": 16330771,
+      "opcodeBits": 24,
+      "prefix": 16330770,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G1_MUL",
+      "min": 16330771,
+      "max": 16330772,
+      "opcodeBits": 24,
+      "prefix": 16330771,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G1_MULTIEXP",
+      "min": 16330772,
+      "max": 16330773,
+      "opcodeBits": 24,
+      "prefix": 16330772,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G1_ZERO",
+      "min": 16330773,
+      "max": 16330774,
+      "opcodeBits": 24,
+      "prefix": 16330773,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_MAP_TO_G1",
+      "min": 16330774,
+      "max": 16330775,
+      "opcodeBits": 24,
+      "prefix": 16330774,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G1_INGROUP",
+      "min": 16330775,
+      "max": 16330776,
+      "opcodeBits": 24,
+      "prefix": 16330775,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G1_ISZERO",
+      "min": 16330776,
+      "max": 16330777,
+      "opcodeBits": 24,
+      "prefix": 16330776,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G2_ADD",
+      "min": 16330784,
+      "max": 16330785,
+      "opcodeBits": 24,
+      "prefix": 16330784,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G2_SUB",
+      "min": 16330785,
+      "max": 16330786,
+      "opcodeBits": 24,
+      "prefix": 16330785,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G2_NEG",
+      "min": 16330786,
+      "max": 16330787,
+      "opcodeBits": 24,
+      "prefix": 16330786,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G2_MUL",
+      "min": 16330787,
+      "max": 16330788,
+      "opcodeBits": 24,
+      "prefix": 16330787,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G2_MULTIEXP",
+      "min": 16330788,
+      "max": 16330789,
+      "opcodeBits": 24,
+      "prefix": 16330788,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G2_ZERO",
+      "min": 16330789,
+      "max": 16330790,
+      "opcodeBits": 24,
+      "prefix": 16330789,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_MAP_TO_G2",
+      "min": 16330790,
+      "max": 16330791,
+      "opcodeBits": 24,
+      "prefix": 16330790,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G2_INGROUP",
+      "min": 16330791,
+      "max": 16330792,
+      "opcodeBits": 24,
+      "prefix": 16330791,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_G2_ISZERO",
+      "min": 16330792,
+      "max": 16330793,
+      "opcodeBits": 24,
+      "prefix": 16330792,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_PAIRING",
+      "min": 16330800,
+      "max": 16330801,
+      "opcodeBits": 24,
+      "prefix": 16330800,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "BLS_PUSHR",
+      "min": 16330801,
+      "max": 16330802,
+      "opcodeBits": 24,
+      "prefix": 16330801,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CDATASIZEQ",
+      "min": 16334848,
+      "max": 16335104,
+      "opcodeBits": 16,
+      "prefix": 63808,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CDATASIZE",
+      "min": 16335104,
+      "max": 16335360,
+      "opcodeBits": 16,
+      "prefix": 63809,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDATASIZEQ",
+      "min": 16335360,
+      "max": 16335616,
+      "opcodeBits": 16,
+      "prefix": 63810,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SDATASIZE",
+      "min": 16335616,
+      "max": 16335872,
+      "opcodeBits": 16,
+      "prefix": 63811,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DEBUGMARK",
+      "min": 16340224,
+      "max": 16340480,
+      "opcodeBits": 16,
+      "prefix": 63829,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "uint",
+          "len": 16
+        }
+      ]
+    },
+    {
+      "name": "LDGRAMS",
+      "min": 16384000,
+      "max": 16384256,
+      "opcodeBits": 16,
+      "prefix": 64000,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDVARINT16",
+      "min": 16384256,
+      "max": 16384512,
+      "opcodeBits": 16,
+      "prefix": 64001,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STGRAMS",
+      "min": 16384512,
+      "max": 16384768,
+      "opcodeBits": 16,
+      "prefix": 64002,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STVARINT16",
+      "min": 16384768,
+      "max": 16385024,
+      "opcodeBits": 16,
+      "prefix": 64003,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDVARUINT32",
+      "min": 16385024,
+      "max": 16385280,
+      "opcodeBits": 16,
+      "prefix": 64004,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDVARINT32",
+      "min": 16385280,
+      "max": 16385536,
+      "opcodeBits": 16,
+      "prefix": 64005,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STVARUINT32",
+      "min": 16385536,
+      "max": 16385792,
+      "opcodeBits": 16,
+      "prefix": 64006,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STVARINT32",
+      "min": 16385792,
+      "max": 16386048,
+      "opcodeBits": 16,
+      "prefix": 64007,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDMSGADDR",
+      "min": 16400384,
+      "max": 16400640,
+      "opcodeBits": 16,
+      "prefix": 64064,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDMSGADDRQ",
+      "min": 16400640,
+      "max": 16400896,
+      "opcodeBits": 16,
+      "prefix": 64065,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PARSEMSGADDR",
+      "min": 16400896,
+      "max": 16401152,
+      "opcodeBits": 16,
+      "prefix": 64066,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "PARSEMSGADDRQ",
+      "min": 16401152,
+      "max": 16401408,
+      "opcodeBits": 16,
+      "prefix": 64067,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "REWRITESTDADDR",
+      "min": 16401408,
+      "max": 16401664,
+      "opcodeBits": 16,
+      "prefix": 64068,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "REWRITESTDADDRQ",
+      "min": 16401664,
+      "max": 16401920,
+      "opcodeBits": 16,
+      "prefix": 64069,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "REWRITEVARADDR",
+      "min": 16401920,
+      "max": 16402176,
+      "opcodeBits": 16,
+      "prefix": 64070,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "REWRITEVARADDRQ",
+      "min": 16402176,
+      "max": 16402432,
+      "opcodeBits": 16,
+      "prefix": 64071,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDSTDADDR",
+      "min": 16402432,
+      "max": 16402688,
+      "opcodeBits": 16,
+      "prefix": 64072,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDSTDADDRQ",
+      "min": 16402688,
+      "max": 16402944,
+      "opcodeBits": 16,
+      "prefix": 64073,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDOPTSTDADDR",
+      "min": 16404480,
+      "max": 16404736,
+      "opcodeBits": 16,
+      "prefix": 64080,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "LDOPTSTDADDRQ",
+      "min": 16404736,
+      "max": 16404992,
+      "opcodeBits": 16,
+      "prefix": 64081,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STSTDADDR",
+      "min": 16404992,
+      "max": 16405248,
+      "opcodeBits": 16,
+      "prefix": 64082,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STSTDADDRQ",
+      "min": 16405248,
+      "max": 16405504,
+      "opcodeBits": 16,
+      "prefix": 64083,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STOPTSTDADDR",
+      "min": 16405504,
+      "max": 16405760,
+      "opcodeBits": 16,
+      "prefix": 64084,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "STOPTSTDADDRQ",
+      "min": 16405760,
+      "max": 16406016,
+      "opcodeBits": 16,
+      "prefix": 64085,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SENDRAWMSG",
+      "min": 16449536,
+      "max": 16449792,
+      "opcodeBits": 16,
+      "prefix": 64256,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RAWRESERVE",
+      "min": 16450048,
+      "max": 16450304,
+      "opcodeBits": 16,
+      "prefix": 64258,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "RAWRESERVEX",
+      "min": 16450304,
+      "max": 16450560,
+      "opcodeBits": 16,
+      "prefix": 64259,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETCODE",
+      "min": 16450560,
+      "max": 16450816,
+      "opcodeBits": 16,
+      "prefix": 64260,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETLIBCODE",
+      "min": 16451072,
+      "max": 16451328,
+      "opcodeBits": 16,
+      "prefix": 64262,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "CHANGELIB",
+      "min": 16451328,
+      "max": 16451584,
+      "opcodeBits": 16,
+      "prefix": 64263,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SENDMSG",
+      "min": 16451584,
+      "max": 16451840,
+      "opcodeBits": 16,
+      "prefix": 64264,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DUMPSTK",
+      "min": 16646144,
+      "max": 16646400,
+      "opcodeBits": 16,
+      "prefix": 65024,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DEBUG",
+      "min": 16646400,
+      "max": 16651264,
+      "opcodeBits": 8,
+      "prefix": 65025,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "uint",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "STRDUMP",
+      "min": 16651264,
+      "max": 16651520,
+      "opcodeBits": 16,
+      "prefix": 65044,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "DEBUG_1",
+      "min": 16651520,
+      "max": 16654336,
+      "opcodeBits": 8,
+      "prefix": 65045,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "uint",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "DUMP",
+      "min": 16654336,
+      "max": 16658432,
+      "opcodeBits": 12,
+      "prefix": 4066,
+      "kind": "fixed",
+      "args": [
+        {
+          "type": "stack",
+          "len": 4
+        }
+      ]
+    },
+    {
+      "name": "DEBUG_2",
+      "min": 16658432,
+      "max": 16707584,
+      "opcodeBits": 8,
+      "prefix": 65072,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "uint",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "DEBUGSTR",
+      "min": 16707584,
+      "max": 16711680,
+      "opcodeBits": 12,
+      "prefix": 4079,
+      "kind": "ext",
+      "args": [
+        {
+          "type": "debugstr"
+        }
+      ]
+    },
+    {
+      "name": "SETCP",
+      "min": 16711680,
+      "max": 16773120,
+      "opcodeBits": 8,
+      "prefix": 65280,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "uint",
+          "len": 8
+        }
+      ]
+    },
+    {
+      "name": "SETCPX",
+      "min": 16773120,
+      "max": 16773376,
+      "opcodeBits": 16,
+      "prefix": 65520,
+      "kind": "simple",
+      "args": []
+    },
+    {
+      "name": "SETCP_SHORT",
+      "min": 16773376,
+      "max": 16777216,
+      "opcodeBits": 8,
+      "prefix": 65521,
+      "kind": "fixed-range",
+      "args": [
+        {
+          "type": "delta",
+          "delta": -256,
+          "arg": {
+            "type": "uint",
+            "len": 8
+          }
+        }
+      ]
+    }
+  ]
+}

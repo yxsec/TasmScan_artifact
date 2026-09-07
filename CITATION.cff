@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use TasmScan, please cite the accompanying paper."
+title: "TasmScan: Continuation-Aware Taint Analysis for TVM Bytecode with Savelist Abstraction"
+type: software
+authors:
+  - family-names: Liu
+    given-names: Yixuan
+  - family-names: Wu
+    given-names: Yin
+  - family-names: Li
+    given-names: Yi
+year: 2026
+repository-code: https://github.com/yxsec/tasmscan

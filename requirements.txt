@@ -1,0 +1,7 @@
+# TasmScan Dependencies
+
+# Core dependency for BOC parsing
+pytoniq-core>=0.1.0
+
+# Optional dependencies for enhanced features
+# pyyaml  # For YAML config file support (optional)
